@@ -1,26 +1,24 @@
 from sympy import *
 from sympy import Abs
 
+
 def norm_of_matrix(main_matrix):
-    mult_transpose_main=(main_matrix.T)*main_matrix
+    # To calculate the norm of a matrix M we use a corollary of the Rayleigh-Ritz Theorem. Which assures us that
+    # the norm of the matrix M is the square root of the largest eigenvalue of the matrix M^{T}*M.
 
-    # Aquí estamos calculando los eigenvectores, eigenvalores y sus multiplicidades#
-    eigenvects_mult_transpose_main=mult_transpose_main.eigenvects()
-    eigenval_mtm=[]
-    for element in eigenvects_mult_transpose_main:
-        eigenval_mtm.append((element[0]))
+    mult_transpose_main = main_matrix.T * main_matrix
 
-    #Calculamos la norma de los eigenvectores y las aproximamos numericamente#
-    norm_eigenval_mtm=[]
-    for i in range(len(eigenval_mtm)):
-        norm_eigenval_mtm.append(Abs(N(sqrt(re(eigenval_mtm[i])**2+im(eigenval_mtm[i])**2),10)))
+    # Now we calculate the exact eigenvalues of M^{T}*M, which are non-negative.
+    eigenvectors_mtm = mult_transpose_main.eigenvects()
+    eigenvalues_mtm = []
+    for element in eigenvectors_mtm:
+        eigenvalues_mtm.append((element[0]))
 
-    num_eigenval_mtm=[]
-    for i in range(len(eigenval_mtm)):
-        #Tenemos que hacer este doble proceso por la forma que aproxima los números
-        num_eigenval_mtm.append(N(norm_eigenval_mtm[i]))
+    # Finally, we generate a numerical approximation of the exact eigenvalues and then select the largest.
+    # We do this because the numerical approximations generate little imaginary parts that we need to filter out.
+    norm_eigenvalues_mtm = []
+    for i in range(len(eigenvalues_mtm)):
+        norm_eigenvalues_mtm.append(Abs(N(sqrt(re(eigenvalues_mtm[i])), 10)))
 
-
-    s=sqrt(max(norm_eigenval_mtm))
+    s = max(norm_eigenvalues_mtm)
     return s
-

@@ -24,8 +24,8 @@ imports:
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#collections.abc">collections.abc</a>
- &#8226;   <a href="#compain_method">compain_method</a>
  &#8226;   <a href="#copyreg">copyreg</a>
+ &#8226;   <a href="#ecm">ecm</a>
  &#8226;   <a href="#encodings">encodings</a>
  &#8226;   <a href="#encodings.aliases">encodings.aliases</a>
  &#8226;   <a href="#encodings.ascii">encodings.ascii</a>
@@ -160,8 +160,9 @@ imports:
  &#8226;   <a href="#linecache">linecache</a>
  &#8226;   <a href="#locale">locale</a>
  &#8226;   <a href="#matrix_norm">matrix_norm</a>
- &#8226;   <a href="#mueller_matrix_aproximation">mueller_matrix_aproximation</a>
+ &#8226;   <a href="#mueller_matrix_approximation">mueller_matrix_approximation</a>
  &#8226;   <a href="#ntpath">ntpath</a>
+ &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#operator">operator</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#pathlib">pathlib</a>
@@ -193,8 +194,8 @@ imports:
  &#8226;   <a href="#urllib.response">urllib.response</a>
  &#8226;   <a href="#urllib.robotparser">urllib.robotparser</a>
  &#8226;   <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
- &#8226;   <a href="#utils.matrix_formatter">utils.matrix_formatter</a>
- &#8226;   <a href="#vandermee_criteria">vandermee_criteria</a>
+ &#8226;   <a href="#utils.format_print_matrix">utils.format_print_matrix</a>
+ &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
  &#8226;   <a href="#warnings">warnings</a>
  &#8226;   <a href="#weakref">weakref</a>
 
@@ -5728,28 +5729,6 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="compain_method"></a>
-  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/compain_method.py" type="text/plain"><tt>compain_method</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#matplotlib.pyplot">matplotlib.pyplot</a>
- &#8226;   <a href="#mueller_matrix_aproximation">mueller_matrix_aproximation</a>
- &#8226;   <a href="#numpy">numpy</a>
- &#8226;   <a href="#numpy.linalg">numpy.linalg</a>
- &#8226;   <a href="#sympy">sympy</a>
- &#8226;   <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
- &#8226;   <a href="#utils.qm_graphic">utils.qm_graphic</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#index.py">index.py</a>
-
-  </div>
-
-</div>
-
-<div class="node">
   <a name="concurrent"></a>
   <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/concurrent/__init__.py" type="text/plain"><tt>concurrent</tt></a>
 <span class="moduletype">Package</span>  <div class="import">
@@ -6883,6 +6862,27 @@ imported by:
  &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#sympy.testing.runtests">sympy.testing.runtests</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ecm"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/ecm.py" type="text/plain"><tt>ecm</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#mueller_matrix_approximation">mueller_matrix_approximation</a>
+ &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.linalg">numpy.linalg</a>
+ &#8226;   <a href="#sympy">sympy</a>
+ &#8226;   <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
+ &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#index.py">index.py</a>
 
   </div>
 
@@ -10728,6 +10728,7 @@ imports:
  &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib._bootstrap">importlib._bootstrap</a>
  &#8226;   <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
+ &#8226;   <a href="#importlib.machinery">importlib.machinery</a>
  &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#warnings">warnings</a>
 
@@ -10872,6 +10873,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#imp">imp</a>
+ &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib.abc">importlib.abc</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#numpy.compat.py3k">numpy.compat.py3k</a>
@@ -11728,8 +11730,8 @@ imported by:
   <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/k_irreducible.py" type="text/plain"><tt>k_irreducible</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#sympy">sympy</a>
- &#8226;   <a href="#utils.matrix_formatter">utils.matrix_formatter</a>
+    <a href="#numpy">numpy</a>
+ &#8226;   <a href="#sympy">sympy</a>
 
   </div>
   <div class="import">
@@ -11747,8 +11749,7 @@ imported by:
 imports:
     <a href="#numpy">numpy</a>
  &#8226;   <a href="#sympy">sympy</a>
- &#8226;   <a href="#sys">sys</a>
- &#8226;   <a href="#utils.matrix_formatter">utils.matrix_formatter</a>
+ &#8226;   <a href="#utils.format_print_matrix">utils.format_print_matrix</a>
 
   </div>
   <div class="import">
@@ -12258,7 +12259,7 @@ imported by:
  &#8226;   <a href="#mpl_toolkits.mplot3d.axes3d">mpl_toolkits.mplot3d.axes3d</a>
  &#8226;   <a href="#mpl_toolkits.mplot3d.axis3d">mpl_toolkits.mplot3d.axis3d</a>
  &#8226;   <a href="#sympy.testing.runtests">sympy.testing.runtests</a>
- &#8226;   <a href="#utils.qm_graphic">utils.qm_graphic</a>
+ &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
 
   </div>
 
@@ -13599,7 +13600,7 @@ imported by:
  &#8226;   <a href="#matplotlib.image">matplotlib.image</a>
  &#8226;   <a href="#matplotlib.pyplot">matplotlib.pyplot</a>
  &#8226;   <a href="#matplotlib.streamplot">matplotlib.streamplot</a>
- &#8226;   <a href="#utils.qm_graphic">utils.qm_graphic</a>
+ &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
 
   </div>
 
@@ -14592,15 +14593,14 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#compain_method">compain_method</a>
- &#8226;   <a href="#matplotlib">matplotlib</a>
+    <a href="#matplotlib">matplotlib</a>
  &#8226;   <a href="#matplotlib._enums">matplotlib._enums</a>
  &#8226;   <a href="#matplotlib.backend_bases">matplotlib.backend_bases</a>
  &#8226;   <a href="#matplotlib.backends.backend_webagg_core">matplotlib.backends.backend_webagg_core</a>
  &#8226;   <a href="#matplotlib.figure">matplotlib.figure</a>
  &#8226;   <a href="#matplotlib.image">matplotlib.image</a>
  &#8226;   <a href="#matplotlib.pylab">matplotlib.pylab</a>
- &#8226;   <a href="#utils.qm_graphic">utils.qm_graphic</a>
+ &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
 
   </div>
 
@@ -15319,7 +15319,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#index.py">index.py</a>
- &#8226;   <a href="#utils.mueller_matrix_aproximation">utils.mueller_matrix_aproximation</a>
+ &#8226;   <a href="#utils.mueller_matrix_approximation">utils.mueller_matrix_approximation</a>
 
   </div>
 
@@ -16811,17 +16811,16 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="mueller_matrix_aproximation"></a>
-  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/mueller_matrix_aproximation.py" type="text/plain"><tt>mueller_matrix_aproximation</tt></a>
+  <a name="mueller_matrix_approximation"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/mueller_matrix_approximation.py" type="text/plain"><tt>mueller_matrix_approximation</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#sympy">sympy</a>
- &#8226;   <a href="#utils.mueller_matrix_aproximation">utils.mueller_matrix_aproximation</a>
+    <a href="#utils.mueller_matrix_approximation">utils.mueller_matrix_approximation</a>
 
   </div>
   <div class="import">
 imported by:
-    <a href="#compain_method">compain_method</a>
+    <a href="#ecm">ecm</a>
  &#8226;   <a href="#index.py">index.py</a>
 
   </div>
@@ -17847,8 +17846,10 @@ imports:
   <div class="import">
 imported by:
     <a href="#PIL.Image">PIL.Image</a>
- &#8226;   <a href="#compain_method">compain_method</a>
  &#8226;   <a href="#contourpy">contourpy</a>
+ &#8226;   <a href="#ecm">ecm</a>
+ &#8226;   <a href="#index.py">index.py</a>
+ &#8226;   <a href="#k_irreducible">k_irreducible</a>
  &#8226;   <a href="#k_strongly_irreducible">k_strongly_irreducible</a>
  &#8226;   <a href="#matplotlib">matplotlib</a>
  &#8226;   <a href="#matplotlib._cm">matplotlib._cm</a>
@@ -18001,9 +18002,8 @@ imported by:
  &#8226;   <a href="#sympy.matrices.dense">sympy.matrices.dense</a>
  &#8226;   <a href="#sympy.matrices.expressions.matexpr">sympy.matrices.expressions.matexpr</a>
  &#8226;   <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
- &#8226;   <a href="#utils.matrix_formatter">utils.matrix_formatter</a>
- &#8226;   <a href="#utils.qm_graphic">utils.qm_graphic</a>
- &#8226;   <a href="#vandermee_criteria">vandermee_criteria</a>
+ &#8226;   <a href="#utils.format_print_matrix">utils.format_print_matrix</a>
+ &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
 
   </div>
 
@@ -21580,7 +21580,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#compain_method">compain_method</a>
+    <a href="#ecm">ecm</a>
  &#8226;   <a href="#matplotlib.pylab">matplotlib.pylab</a>
  &#8226;   <a href="#matplotlib.transforms">matplotlib.transforms</a>
  &#8226;   <a href="#mpl_toolkits.mplot3d.proj3d">mpl_toolkits.mplot3d.proj3d</a>
@@ -26653,10 +26653,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#compain_method">compain_method</a>
+    <a href="#ecm">ecm</a>
  &#8226;   <a href="#k_irreducible">k_irreducible</a>
  &#8226;   <a href="#k_strongly_irreducible">k_strongly_irreducible</a>
- &#8226;   <a href="#mueller_matrix_aproximation">mueller_matrix_aproximation</a>
  &#8226;   <a href="#sympy.abc">sympy.abc</a>
  &#8226;   <a href="#sympy.algebras">sympy.algebras</a>
  &#8226;   <a href="#sympy.assumptions">sympy.assumptions</a>
@@ -26712,8 +26711,8 @@ imported by:
  &#8226;   <a href="#sympy.vector">sympy.vector</a>
  &#8226;   <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
  &#8226;   <a href="#utils.matrix_norm">utils.matrix_norm</a>
- &#8226;   <a href="#utils.mueller_matrix_aproximation">utils.mueller_matrix_aproximation</a>
- &#8226;   <a href="#utils.qm_graphic">utils.qm_graphic</a>
+ &#8226;   <a href="#utils.mueller_matrix_approximation">utils.mueller_matrix_approximation</a>
+ &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
 
   </div>
 
@@ -46221,7 +46220,6 @@ imported by:
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.util">importlib.util</a>
  &#8226;   <a href="#inspect">inspect</a>
- &#8226;   <a href="#k_strongly_irreducible">k_strongly_irreducible</a>
  &#8226;   <a href="#linecache">linecache</a>
  &#8226;   <a href="#locale">locale</a>
  &#8226;   <a href="#logging">logging</a>
@@ -46767,7 +46765,6 @@ imported by:
  &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
  &#8226;   <a href="#tkinter.simpledialog">tkinter.simpledialog</a>
  &#8226;   <a href="#tkinter.ttk">tkinter.ttk</a>
- &#8226;   <a href="#utils.qm_graphic">utils.qm_graphic</a>
 
   </div>
 
@@ -47864,10 +47861,9 @@ imported by:
 <span class="moduletype">NamespacePackage</span>  <div class="import">
 imported by:
     <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
- &#8226;   <a href="#utils.matrix_formatter">utils.matrix_formatter</a>
+ &#8226;   <a href="#utils.format_print_matrix">utils.format_print_matrix</a>
  &#8226;   <a href="#utils.matrix_norm">utils.matrix_norm</a>
- &#8226;   <a href="#utils.mueller_matrix_aproximation">utils.mueller_matrix_aproximation</a>
- &#8226;   <a href="#utils.qm_graphic">utils.qm_graphic</a>
+ &#8226;   <a href="#utils.mueller_matrix_approximation">utils.mueller_matrix_approximation</a>
 
   </div>
 
@@ -47886,7 +47882,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#compain_method">compain_method</a>
+    <a href="#ecm">ecm</a>
  &#8226;   <a href="#index.py">index.py</a>
 
   </div>
@@ -47894,8 +47890,8 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="utils.matrix_formatter"></a>
-  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/utils/matrix_formatter.py" type="text/plain"><tt>utils.matrix_formatter</tt></a>
+  <a name="utils.format_print_matrix"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/utils/format_print_matrix.py" type="text/plain"><tt>utils.format_print_matrix</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#numpy">numpy</a>
@@ -47905,7 +47901,6 @@ imports:
   <div class="import">
 imported by:
     <a href="#index.py">index.py</a>
- &#8226;   <a href="#k_irreducible">k_irreducible</a>
  &#8226;   <a href="#k_strongly_irreducible">k_strongly_irreducible</a>
 
   </div>
@@ -47930,8 +47925,8 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="utils.mueller_matrix_aproximation"></a>
-  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/utils/mueller_matrix_aproximation.py" type="text/plain"><tt>utils.mueller_matrix_aproximation</tt></a>
+  <a name="utils.mueller_matrix_approximation"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/utils/mueller_matrix_approximation.py" type="text/plain"><tt>utils.mueller_matrix_approximation</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#matrix_norm">matrix_norm</a>
@@ -47941,30 +47936,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#mueller_matrix_aproximation">mueller_matrix_aproximation</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="utils.qm_graphic"></a>
-  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/utils/qm_graphic.py" type="text/plain"><tt>utils.qm_graphic</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#matplotlib">matplotlib</a>
- &#8226;   <a href="#matplotlib.cm">matplotlib.cm</a>
- &#8226;   <a href="#matplotlib.pyplot">matplotlib.pyplot</a>
- &#8226;   <a href="#numpy">numpy</a>
- &#8226;   <a href="#sympy">sympy</a>
- &#8226;   <a href="#tkinter">tkinter</a>
- &#8226;   <a href="#utils">utils</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#compain_method">compain_method</a>
- &#8226;   <a href="#vandermee_criteria">vandermee_criteria</a>
+    <a href="#mueller_matrix_approximation">mueller_matrix_approximation</a>
 
   </div>
 
@@ -48000,17 +47972,21 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="vandermee_criteria"></a>
-  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/vandermee_criteria.py" type="text/plain"><tt>vandermee_criteria</tt></a>
+  <a name="van_der_mee_theorem"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/van_der_mee_theorem.py" type="text/plain"><tt>van_der_mee_theorem</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#numpy">numpy</a>
- &#8226;   <a href="#utils.qm_graphic">utils.qm_graphic</a>
+    <a href="#matplotlib">matplotlib</a>
+ &#8226;   <a href="#matplotlib.cm">matplotlib.cm</a>
+ &#8226;   <a href="#matplotlib.pyplot">matplotlib.pyplot</a>
+ &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#sympy">sympy</a>
 
   </div>
   <div class="import">
 imported by:
-    <a href="#index.py">index.py</a>
+    <a href="#ecm">ecm</a>
+ &#8226;   <a href="#index.py">index.py</a>
 
   </div>
 

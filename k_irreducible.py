@@ -1,124 +1,111 @@
 
 from sympy import *
 from sympy import Abs
-from utils.matrix_formatter import formatter_matrix
+import numpy as np
 
-def k_irreducible(M):
-    #eigen is a list of triples of the form (eigenvalue, algebraic multiplicity, eigenvectors)
-    eigen_M=M.eigenvects()
 
-    #Here we separate eigenvalues, algebraic multiplicity and eigenvectors on different lists, related with the same index.
-    #On the next lists, the eigenvalues, eigenvalues and algebraic multiplicity, eigenvectors are calculated excatly
-    eigenval=[]
-    for element in eigen_M:
-        eigenval.append((element[0]))
-    #print(eigenval)
+def k_irreducible(m):
+    # eigen_m is a list with triples that have the form (eigenvalue, algebraic multiplicity, eigenvectors).
+    # The eigenvalues, algebraic multiplicity and eigenvectors are calculated exactly.
+    eigen_m = m.eigenvects()
 
-    mult_alg=[]
-    for element in eigen_M:
+    # Here we separate eigenvalues, algebraic multiplicity and eigenvectors into different lists,
+    # related by the indices.
+    eigenvalues = []
+    for element in eigen_m:
+        eigenvalues.append((element[0]))
+
+    mult_alg = []
+    for element in eigen_m:
         mult_alg.append(element[1])
-    print(mult_alg)
 
-    eigenvec=[]
-    for element in eigen_M:
-        eigenvec.append(element[2:])
-    #print(eigenvec)
-    #We have to calculate the spectral radius of M
-    #Now approximate the exact eigenvalues numerically.
-    num_eigenval=[]
-    for i in range(len(eigenval)):
-        num_eigenval.append(N(eigenval[i],10))
-    print('Los valores propios de la matriz son: ',num_eigenval)
+    eigenvectors = []
+    for element in eigen_m:
+        eigenvectors.append(element[2:])
 
-    #When we calculate eigenvalues, the numerical approximation generate tiny imaginary parts on real eigenvalues
-    #so we filtered that error in the next list, using the fact that in this case imaginary roots comes with their conjugate
-    eigenvals_without_error=[]
-    for i in num_eigenval:
-        conj=i.conjugate()
-        z=conj in num_eigenval
+    # We have to calculate the spectral radius of M.
+    # Now, let's approximate the exact eigenvalues numerically.
+    num_eigenvalues = []
+    for i in range(len(eigenvalues)):
+        num_eigenvalues.append(N(eigenvalues[i], 10))
+
+    # When the eigenvalues are approximated numerically, the numerical approximations generate small imaginary parts
+    # in the real eigenvalues. Then we filter that error into the following list, using the fact that in the case of
+    # polynomials with real coefficients, if a complex number is a root, so is its conjugate.
+    eigenvalues_without_error = []
+    for i in num_eigenvalues:
+        conj = i.conjugate()
+        z = conj in num_eigenvalues
         if simplify(i).is_real == True:
-            eigenvals_without_error.append(i)
+            eigenvalues_without_error.append(i)
         elif simplify(i).is_real == False and z == False:
-            eigenvals_without_error.append(re(i))
+            eigenvalues_without_error.append(re(i))
         else:
-            eigenvals_without_error.append(i)
-    print('valores propios sin error',eigenvals_without_error)
+            eigenvalues_without_error.append(i)
+    print(f"The eigenvalues of the matrix M are: {eigenvalues_without_error}.")
 
-    #Now we calculate the norm of the eigenvalues, so we can find the spectral radius
-    norm_eigenval=[]
-    for i in range(len(eigenvals_without_error)):
-        norm_eigenval.append(Abs(eigenvals_without_error[i]))
-    print('Calculamos la norma de los valores proios: ',norm_eigenval)
+    # norm_eigenvalues is the list of eigenvalue norms.
+    norm_eigenvalues = []
+    for i in range(len(eigenvalues_without_error)):
+        norm_eigenvalues.append(Abs(eigenvalues_without_error[i]))
+    print(f"The norms of the eigenvalues of M are: {norm_eigenvalues}.")
 
-    #the spectral radius ro_M is the maximum on the list norm_eigenvalue
-    ro_M=max(norm_eigenval)
+    # The spectral radius ro_m is the maximum in the list norm_eigenvalue.
+    ro_m = max(norm_eigenvalues)
 
-    #Now we ask if ro_M is in the list of eigenvalues without error
-    if (ro_M in eigenvals_without_error)==True:
-        print('The spectral radius',ro_M,'is an eigenvalue of M')
-        ind_ro_M = eigenvals_without_error.index(ro_M)
-        print(ind_ro_M)
+    # Now we ask if ro_m is in the list of eigenvalues_without_error.
+    if ro_m in eigenvalues_without_error:
+        print(f"The spectral radius, {ro_m}, is an eigenvalue of M.")
+        ind_ro_m = eigenvalues_without_error.index(ro_m)
     else:
-        print('The spectral radius',ro_M,'is NOT an eigenvalue of M')
-        print('Therefore the matrix M is not K-irreducible')
+        print(f"The spectral radius, {ro_m}, is NOT an eigenvalue of M.")
+        print(f"Therefore, the matrix M is not K-irreducible.")
         return
 
-
-    #Now we find the algebraic multiplicity of the spectral radius
-    mul_alg_ro_M=mult_alg[ind_ro_M]
-    print(mul_alg_ro_M)
-    if mul_alg_ro_M!=1:
-        print('The spectral radius has algebraic multiplicity ',mul_alg_ro_M)
-        print('Then, the spectral radius is not a simple eigenvalue. Therefore the matrix is NOT K-irreducible')
+    print("------------------------------------------------------------------------------------")
+    # We need to know if the spectral radius is a simple eigenvalue. That is, we need to know if the algebraic
+    # multiplicity of the spectral radius is 1.
+    mul_alg_ro_m = mult_alg[ind_ro_m]
+    if mul_alg_ro_m != 1:
+        print(f"The spectral radius, {ro_m}, has algebraic multiplicity {mul_alg_ro_m}. Then, is not a simple eigenvalue.")
+        print(f"Therefore the matrix is NOT K-irreducible.")
         return
     else:
-        print('The spectral radius ',ro_M,' is a simple eigenvalue')
+        print(f"The spectral radius, {ro_m}, is a simple eigenvalue.")
 
-    #At this point we know the spectral radius is a simple eigenvalue of M
-    #Now we search for eigenvals with absolute value equal ro_M (the spectral radius)
-    index_1=[]
-    for y in range(len(norm_eigenval)):
-        if norm_eigenval[y]==ro_M:
+    # We look for another eigenvalue with the same norm as the spectral radius and
+    # then check if they are simple eigenvalues.
+
+    index_1 = []
+    for y in range(len(norm_eigenvalues)):
+        if norm_eigenvalues[y] == ro_m:
             index_1.append(y)
         else:
             continue
-    print(index_1)
-    print('Los índices de losvalores propios con valor absoluto igual al radio espectral son ')
+
     for element in index_1:
-        if mult_alg[element]!=1:
-            print('Existe otro eigenvector ',eigenvals_without_error[element],' cuyo valor absolto es el radio espectral')
-            print('tal que su multiplicidad algebráica es ', mult_alg[element] ,'por lo que no es valor propio simple')
-            print("Por lo tanto la matriz M no es K-irreducible")
+        if mult_alg[element] != 1:
+            print(f"There is another eigenvalue, ({eigenvalues_without_error[element]}), with the same norm as {ro_m}")
+            print(f"and algebraic multiplicity {mult_alg[element]}. Then, is not a simple eigenvalue.")
+            print("Therefore, the matrix is NOT K-irreducible.")
             return
         else:
             continue
-    print("Todos los valores propios con valor absoluto igual al radio espectral son simples")
+    print(f"All eigenvalues with norm {ro_m} are simples.")
 
-    #En este punto sabemos que el radio espectral es eigenvalor simple y todos los valores propios con
-    #valor absoluto igual al radio espectral son simples
-
-    #Queda comprobar si el valor propio asociado al radio espectral está conenido dentro del cono
-    #para ello usamos el vector propio único v asociado al radio espectral y vemos si vo -v está en el cono
-
-    V=eigenvec[ind_ro_M] #esto es de la forma ([Matrix([]])
-    print(V)
-    U=V[0] #Extraemos el único elemento de la lista y obtenemos ahora la matriz [Matrix([])]
-    print(U)
-    W=U[0] #extramos de nuevo el único elemento de la lista y obtenemos ahora la matrix Matrix([])
-    print(W)
-    print(W[0,0])
-    print(W[1,0])
-    print(W[2,0])
-    print(W[3,0])
-
-    #Comprobamos que el único valor propio asociado a ro_M esté contenido en el cono
-    #TODO: falta hacer la prueba con el inverso aditivo
-    print("----------------------------------")
-    if Abs(N((W[3,0])**2,10))+Abs(N((W[2,0])**2,10))+Abs(N((W[1,0])**2,10))<=Abs(N((W[0,0])**2,10)):
-        print("EL eigenvector asociado al radio espectral pertenece al cono, por lo tanto M es K-irreducible")
+    print("------------------------------------------------------------------------------------")
+    # Remains to check if the only eigenvector v (or -v) associated with the spectral radius is in the light cone.
+    V = eigenvectors[ind_ro_m][0][0]
+    U = Matrix([[re(N((V[0, 0]), 10))], [re(N((V[1, 0]), 10))], [re(N((V[2, 0]), 10))], [re(N((V[3, 0]), 10))]])
+    print('The eigenvector associated to the spectral radius is:\n', np.array(U).astype(np.float64))
+    if U[0, 0] < 0:
+        W = (-1) * U
+        if ((W[3, 0]) ** 2) + ((W[2, 0]) ** 2) + ((W[1, 0]) ** 2) <= ((W[0, 0]) ** 2):
+            print('The eigenvector corresponding to the spectral radius is in the light cone, therefore M is K-irreducible.')
+        else:
+            print("The eigenvector corresponding to the spectral radius is NOT in the light cone, therefore M is NOT K-irreducible. ")
     else:
-        print("El vector propio asociado al radio espectral no está en el cono, por lo que la matriz no es K-irreducible")
-    print("----------------------------------")
-
-
-
+        if ((U[3, 0]) ** 2) + ((U[2, 0]) ** 2) + ((U[1, 0]) ** 2) <= ((U[0, 0]) ** 2):
+            print('The eigenvector corresponding to the spectral radius is in the light light cone, therefore M is K-irreducible.')
+        else:
+            print("The eigenvector corresponding to the spectral radius is NOT in the light cone, therefore M is NOT K-irreducible. ")
