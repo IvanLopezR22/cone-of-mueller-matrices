@@ -39,7 +39,7 @@ $$x$$
   - [3.2] **Van Der Mee Theorem**: Deduce if a matrix is Mueller. Let $M$ be a $4\times 4-$real matrix and 
 $q_{M}$ be the quadratic form defined by $M^{T}GM$. Then
 
-$M$ is Mueller if and only if for all 
+$M$ is Mueller if and only if for all $\binom{1}{2}$
 $ \begin{bmatrix}
 a_1 & a_2 & a_3 \\
 b_1 & b_2 & b_3 \\
