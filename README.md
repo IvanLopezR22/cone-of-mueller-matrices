@@ -39,7 +39,9 @@ $$x$$
   - [3.2] **Van Der Mee Theorem**: Deduce if a matrix is Mueller. Let $M$ be a $4\times 4-$real matrix and 
 $q_{M}$ be the quadratic form defined by $M^{T}GM$. Then
 
-$M$ is Mueller if and only if for all $\left( 
-```math
-begin{bmatrix}X\\Y\end{bmatrix}
-```
+$M$ is Mueller if and only if for all 
+$ \begin{bmatrix}
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3 \\
+c_1 & c_2 & c_3 
+\end{bmatrix}  $
