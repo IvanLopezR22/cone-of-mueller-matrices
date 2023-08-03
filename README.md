@@ -35,7 +35,28 @@ $$x$$
 
   <a name="Documentation-Matrix norm"></a><a name="3.1"></a>
   - [3.1] **Matrix norm**: This program is based on the Rayleigh-Ritz Theorem.
-  - Which assures us that the norm of the matrix M is the square root of the largest eigenvalue of the matrix $M^{T}*M$.
-  - 
-  - The documentation is written in the form of comments in each of the files or in the article code.;
-$$M_{4}(\mathbb{R})$$
+  - Which assures us that the norm of the matrix M is the square root of the largest eigenvalue of the matrix $M^{T}M$.
+  - [3.2] **Van Der Mee Theorem**: Deduce if a matrix is Mueller. Let $M$ be a $4\times 4-$real matrix and 
+$q_{M}$ be the quadratic form defined by $M^{T}GM$. Then
+
+$M$ is Mueller if and only if for all $\left( 
+\begin{array}{c}
+a \\ 
+z%
+\end{array}%
+\right) \in K$ with $\left( 
+\begin{array}{c}
+b \\ 
+x%
+\end{array}%
+\right) =M\left( 
+\begin{array}{c}
+a \\ 
+z%
+\end{array}%
+\right) $, $b\geq 0$ and $q_{M}\left( 
+\begin{array}{c}
+b \\ 
+x%
+\end{array}%
+\right) \geq 0$.
