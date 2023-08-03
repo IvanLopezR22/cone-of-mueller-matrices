@@ -21,10 +21,15 @@ imports:
     <a href="#_collections_abc">_collections_abc</a>
  &#8226;   <a href="#_weakrefset">_weakrefset</a>
  &#8226;   <a href="#abc">abc</a>
+ &#8226;   <a href="#appr_invertible_matrix">appr_invertible_matrix</a>
+ &#8226;   <a href="#appr_invertible_mueller_matrix">appr_invertible_mueller_matrix</a>
+ &#8226;   <a href="#appr_k_primitive">appr_k_primitive</a>
+ &#8226;   <a href="#appr_mueller_matrix">appr_mueller_matrix</a>
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#collections.abc">collections.abc</a>
  &#8226;   <a href="#copyreg">copyreg</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
  &#8226;   <a href="#ecm">ecm</a>
  &#8226;   <a href="#encodings">encodings</a>
  &#8226;   <a href="#encodings.aliases">encodings.aliases</a>
@@ -155,12 +160,12 @@ imports:
  &#8226;   <a href="#heapq">heapq</a>
  &#8226;   <a href="#io">io</a>
  &#8226;   <a href="#k_irreducible">k_irreducible</a>
- &#8226;   <a href="#k_strongly_irreducible">k_strongly_irreducible</a>
+ &#8226;   <a href="#k_primitive">k_primitive</a>
  &#8226;   <a href="#keyword">keyword</a>
  &#8226;   <a href="#linecache">linecache</a>
  &#8226;   <a href="#locale">locale</a>
+ &#8226;   <a href="#matplotlib.pyplot">matplotlib.pyplot</a>
  &#8226;   <a href="#matrix_norm">matrix_norm</a>
- &#8226;   <a href="#mueller_matrix_approximation">mueller_matrix_approximation</a>
  &#8226;   <a href="#ntpath">ntpath</a>
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#operator">operator</a>
@@ -183,6 +188,7 @@ imports:
  &#8226;   <a href="#sre_constants">sre_constants</a>
  &#8226;   <a href="#sre_parse">sre_parse</a>
  &#8226;   <a href="#stat">stat</a>
+ &#8226;   <a href="#sympy">sympy</a>
  &#8226;   <a href="#token">token</a>
  &#8226;   <a href="#tokenize">tokenize</a>
  &#8226;   <a href="#traceback">traceback</a>
@@ -193,8 +199,8 @@ imports:
  &#8226;   <a href="#urllib.request">urllib.request</a>
  &#8226;   <a href="#urllib.response">urllib.response</a>
  &#8226;   <a href="#urllib.robotparser">urllib.robotparser</a>
- &#8226;   <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
  &#8226;   <a href="#utils.format_print_matrix">utils.format_print_matrix</a>
+ &#8226;   <a href="#utils.request_matrix">utils.request_matrix</a>
  &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
  &#8226;   <a href="#warnings">warnings</a>
  &#8226;   <a href="#weakref">weakref</a>
@@ -2708,7 +2714,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#PySimpleGUI.PySimpleGUI">PySimpleGUI.PySimpleGUI</a>
- &#8226;   <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
+ &#8226;   <a href="#utils.request_matrix">utils.request_matrix</a>
 
   </div>
 
@@ -2800,12 +2806,12 @@ imported by:
  &#8226;   <a href="#mpmath.functions.zeta">mpmath.functions.zeta</a>
  &#8226;   <a href="#numpy._typing">numpy._typing</a>
  &#8226;   <a href="#numpy._typing._array_like">numpy._typing._array_like</a>
- &#8226;   <a href="#numpy._typing._generic_alias">numpy._typing._generic_alias</a>
  &#8226;   <a href="#numpy._typing._nested_sequence">numpy._typing._nested_sequence</a>
  &#8226;   <a href="#numpy.array_api._array_object">numpy.array_api._array_object</a>
  &#8226;   <a href="#numpy.array_api._creation_functions">numpy.array_api._creation_functions</a>
  &#8226;   <a href="#numpy.array_api._data_type_functions">numpy.array_api._data_type_functions</a>
  &#8226;   <a href="#numpy.array_api._elementwise_functions">numpy.array_api._elementwise_functions</a>
+ &#8226;   <a href="#numpy.array_api._indexing_functions">numpy.array_api._indexing_functions</a>
  &#8226;   <a href="#numpy.array_api._manipulation_functions">numpy.array_api._manipulation_functions</a>
  &#8226;   <a href="#numpy.array_api._searching_functions">numpy.array_api._searching_functions</a>
  &#8226;   <a href="#numpy.array_api._set_functions">numpy.array_api._set_functions</a>
@@ -3843,6 +3849,17 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="_version_meson"></a>
+  <a target="code" href="" type="text/plain"><tt>_version_meson</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#numpy.version">numpy.version</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="_warnings"></a>
   <tt>_warnings</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
@@ -3970,6 +3987,85 @@ imported by:
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
     <a href="#sympy.testing.runtests">sympy.testing.runtests</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="appr_invertible_matrix"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/appr_invertible_matrix.py" type="text/plain"><tt>appr_invertible_matrix</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#numpy">numpy</a>
+ &#8226;   <a href="#sympy">sympy</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#appr_invertible_mueller_matrix">appr_invertible_mueller_matrix</a>
+ &#8226;   <a href="#ecm">ecm</a>
+ &#8226;   <a href="#index.py">index.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="appr_invertible_mueller_matrix"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/appr_invertible_mueller_matrix.py" type="text/plain"><tt>appr_invertible_mueller_matrix</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#appr_invertible_matrix">appr_invertible_matrix</a>
+ &#8226;   <a href="#appr_mueller_matrix">appr_mueller_matrix</a>
+ &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ecm">ecm</a>
+ &#8226;   <a href="#index.py">index.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="appr_k_primitive"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/appr_k_primitive.py" type="text/plain"><tt>appr_k_primitive</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#matrix_norm">matrix_norm</a>
+ &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#sympy">sympy</a>
+ &#8226;   <a href="#utils.k_primitive">utils.k_primitive</a>
+ &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#index.py">index.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="appr_mueller_matrix"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/appr_mueller_matrix.py" type="text/plain"><tt>appr_mueller_matrix</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#matrix_norm">matrix_norm</a>
+ &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#sympy">sympy</a>
+ &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#appr_invertible_mueller_matrix">appr_invertible_mueller_matrix</a>
+ &#8226;   <a href="#index.py">index.py</a>
 
   </div>
 
@@ -5134,6 +5230,7 @@ imported by:
  &#8226;   <a href="#matplotlib.axes._axes">matplotlib.axes._axes</a>
  &#8226;   <a href="#mpmath.libmp.backend">mpmath.libmp.backend</a>
  &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
  &#8226;   <a href="#numpy.core.numerictypes">numpy.core.numerictypes</a>
  &#8226;   <a href="#numpy.lib.function_base">numpy.lib.function_base</a>
  &#8226;   <a href="#numpy.ma.core">numpy.ma.core</a>
@@ -5529,6 +5626,7 @@ imported by:
  &#8226;   <a href="#matplotlib.category">matplotlib.category</a>
  &#8226;   <a href="#matplotlib.cbook">matplotlib.cbook</a>
  &#8226;   <a href="#matplotlib.dviread">matplotlib.dviread</a>
+ &#8226;   <a href="#matplotlib.font_manager">matplotlib.font_manager</a>
  &#8226;   <a href="#matplotlib.mathtext">matplotlib.mathtext</a>
  &#8226;   <a href="#matplotlib.patches">matplotlib.patches</a>
  &#8226;   <a href="#matplotlib.textpath">matplotlib.textpath</a>
@@ -5538,7 +5636,6 @@ imported by:
  &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
  &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
  &#8226;   <a href="#numpy.core.records">numpy.core.records</a>
- &#8226;   <a href="#numpy.testing._private.parameterized">numpy.testing._private.parameterized</a>
  &#8226;   <a href="#packaging._manylinux">packaging._manylinux</a>
  &#8226;   <a href="#packaging.version">packaging.version</a>
  &#8226;   <a href="#pkg_resources">pkg_resources</a>
@@ -5663,13 +5760,14 @@ imported by:
  &#8226;   <a href="#matplotlib.markers">matplotlib.markers</a>
  &#8226;   <a href="#matplotlib.spines">matplotlib.spines</a>
  &#8226;   <a href="#numpy._typing._array_like">numpy._typing._array_like</a>
- &#8226;   <a href="#numpy._typing._generic_alias">numpy._typing._generic_alias</a>
+ &#8226;   <a href="#numpy._typing._dtype_like">numpy._typing._dtype_like</a>
+ &#8226;   <a href="#numpy._typing._nested_sequence">numpy._typing._nested_sequence</a>
+ &#8226;   <a href="#numpy._typing._shape">numpy._typing._shape</a>
  &#8226;   <a href="#numpy.array_api._creation_functions">numpy.array_api._creation_functions</a>
  &#8226;   <a href="#numpy.array_api._data_type_functions">numpy.array_api._data_type_functions</a>
  &#8226;   <a href="#numpy.core._ufunc_config">numpy.core._ufunc_config</a>
  &#8226;   <a href="#numpy.lib.function_base">numpy.lib.function_base</a>
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
- &#8226;   <a href="#numpy.testing._private.decorators">numpy.testing._private.decorators</a>
  &#8226;   <a href="#pkg_resources._vendor.more_itertools.more">pkg_resources._vendor.more_itertools.more</a>
  &#8226;   <a href="#pkg_resources._vendor.pyparsing.core">pkg_resources._vendor.pyparsing.core</a>
  &#8226;   <a href="#pkg_resources._vendor.pyparsing.results">pkg_resources._vendor.pyparsing.results</a>
@@ -6169,6 +6267,7 @@ imported by:
  &#8226;   <a href="#ctypes._endian">ctypes._endian</a>
  &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
  &#8226;   <a href="#dateutil.tz.win">dateutil.tz.win</a>
+ &#8226;   <a href="#index.py">index.py</a>
  &#8226;   <a href="#multiprocessing.sharedctypes">multiprocessing.sharedctypes</a>
  &#8226;   <a href="#numpy._distributor_init">numpy._distributor_init</a>
  &#8226;   <a href="#numpy.core._dtype_ctypes">numpy.core._dtype_ctypes</a>
@@ -6858,8 +6957,6 @@ imported by:
  &#8226;   <a href="#mpmath.ctx_mp">mpmath.ctx_mp</a>
  &#8226;   <a href="#mpmath.identification">mpmath.identification</a>
  &#8226;   <a href="#mpmath.matrices.matrices">mpmath.matrices.matrices</a>
- &#8226;   <a href="#numpy.testing._private.noseclasses">numpy.testing._private.noseclasses</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#sympy.testing.runtests">sympy.testing.runtests</a>
 
@@ -6872,12 +6969,12 @@ imported by:
   <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/ecm.py" type="text/plain"><tt>ecm</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#mueller_matrix_approximation">mueller_matrix_approximation</a>
+    <a href="#appr_invertible_matrix">appr_invertible_matrix</a>
+ &#8226;   <a href="#appr_invertible_mueller_matrix">appr_invertible_mueller_matrix</a>
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.linalg">numpy.linalg</a>
  &#8226;   <a href="#sympy">sympy</a>
- &#8226;   <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
- &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
+ &#8226;   <a href="#utils.request_matrix">utils.request_matrix</a>
 
   </div>
   <div class="import">
@@ -10147,7 +10244,6 @@ imported by:
  &#8226;   <a href="#numpy.linalg.linalg">numpy.linalg.linalg</a>
  &#8226;   <a href="#numpy.ma.core">numpy.ma.core</a>
  &#8226;   <a href="#numpy.polynomial.polyutils">numpy.polynomial.polyutils</a>
- &#8226;   <a href="#numpy.testing._private.parameterized">numpy.testing._private.parameterized</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#operator">operator</a>
  &#8226;   <a href="#packaging._manylinux">packaging._manylinux</a>
@@ -11321,8 +11417,6 @@ imported by:
  &#8226;   <a href="#mpmath">mpmath</a>
  &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
  &#8226;   <a href="#numpy.ma.core">numpy.ma.core</a>
- &#8226;   <a href="#numpy.testing._private.noseclasses">numpy.testing._private.noseclasses</a>
- &#8226;   <a href="#numpy.testing._private.parameterized">numpy.testing._private.parameterized</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#pdb">pdb</a>
  &#8226;   <a href="#pkg_resources">pkg_resources</a>
@@ -11528,6 +11622,7 @@ imported by:
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
  &#8226;   <a href="#numpy.core.shape_base">numpy.core.shape_base</a>
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
+ &#8226;   <a href="#numpy.lib.recfunctions">numpy.lib.recfunctions</a>
  &#8226;   <a href="#numpy.ma.extras">numpy.ma.extras</a>
  &#8226;   <a href="#packaging.specifiers">packaging.specifiers</a>
  &#8226;   <a href="#packaging.version">packaging.version</a>
@@ -11743,13 +11838,12 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="k_strongly_irreducible"></a>
-  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/k_strongly_irreducible.py" type="text/plain"><tt>k_strongly_irreducible</tt></a>
+  <a name="k_primitive"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/k_primitive.py" type="text/plain"><tt>k_primitive</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#numpy">numpy</a>
  &#8226;   <a href="#sympy">sympy</a>
- &#8226;   <a href="#utils.format_print_matrix">utils.format_print_matrix</a>
 
   </div>
   <div class="import">
@@ -12043,6 +12137,7 @@ imported by:
  &#8226;   <a href="#mpmath.libmp.libintmath">mpmath.libmp.libintmath</a>
  &#8226;   <a href="#mpmath.libmp.libmpf">mpmath.libmp.libmpf</a>
  &#8226;   <a href="#mpmath.math2">mpmath.math2</a>
+ &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.core._machar">numpy.core._machar</a>
  &#8226;   <a href="#numpy.lib">numpy.lib</a>
  &#8226;   <a href="#numpy.lib.index_tricks">numpy.lib.index_tricks</a>
@@ -13915,6 +14010,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#base64">base64</a>
+ &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#copy">copy</a>
  &#8226;   <a href="#dataclasses">dataclasses</a>
  &#8226;   <a href="#functools">functools</a>
@@ -14593,7 +14689,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#matplotlib">matplotlib</a>
+    <a href="#index.py">index.py</a>
+ &#8226;   <a href="#matplotlib">matplotlib</a>
  &#8226;   <a href="#matplotlib._enums">matplotlib._enums</a>
  &#8226;   <a href="#matplotlib.backend_bases">matplotlib.backend_bases</a>
  &#8226;   <a href="#matplotlib.backends.backend_webagg_core">matplotlib.backends.backend_webagg_core</a>
@@ -15083,6 +15180,7 @@ imports:
  &#8226;   <a href="#matplotlib.tri">matplotlib.tri</a>
  &#8226;   <a href="#matplotlib.tri._trifinder">matplotlib.tri._trifinder</a>
  &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#sys">sys</a>
 
   </div>
   <div class="import">
@@ -15318,8 +15416,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#index.py">index.py</a>
- &#8226;   <a href="#utils.mueller_matrix_approximation">utils.mueller_matrix_approximation</a>
+    <a href="#appr_k_primitive">appr_k_primitive</a>
+ &#8226;   <a href="#appr_mueller_matrix">appr_mueller_matrix</a>
+ &#8226;   <a href="#index.py">index.py</a>
 
   </div>
 
@@ -15369,7 +15468,6 @@ imported by:
 <span class="moduletype">Package</span>  <div class="import">
 imports:
     <a href="#os">os</a>
- &#8226;   <a href="#sys">sys</a>
 
   </div>
   <div class="import">
@@ -16811,23 +16909,6 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="mueller_matrix_approximation"></a>
-  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/mueller_matrix_approximation.py" type="text/plain"><tt>mueller_matrix_approximation</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#utils.mueller_matrix_approximation">utils.mueller_matrix_approximation</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#ecm">ecm</a>
- &#8226;   <a href="#index.py">index.py</a>
-
-  </div>
-
-</div>
-
-<div class="node">
   <a name="multiprocessing"></a>
   <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/multiprocessing/__init__.py" type="text/plain"><tt>multiprocessing</tt></a>
 <span class="moduletype">Package</span>  <div class="import">
@@ -17784,6 +17865,7 @@ imported by:
 <span class="moduletype">Package</span>  <div class="import">
 imports:
     <a href="#builtins">builtins</a>
+ &#8226;   <a href="#math">math</a>
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.__config__">numpy.__config__</a>
  &#8226;   <a href="#numpy._distributor_init">numpy._distributor_init</a>
@@ -17799,9 +17881,12 @@ imports:
  &#8226;   <a href="#numpy.complexfloating">numpy.complexfloating</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._dtype_ctypes">numpy.core._dtype_ctypes</a>
+ &#8226;   <a href="#numpy.core._multiarray_tests">numpy.core._multiarray_tests</a>
  &#8226;   <a href="#numpy.ctypeslib">numpy.ctypeslib</a>
  &#8226;   <a href="#numpy.datetime64">numpy.datetime64</a>
  &#8226;   <a href="#numpy.dtype">numpy.dtype</a>
+ &#8226;   <a href="#numpy.dtypes">numpy.dtypes</a>
+ &#8226;   <a href="#numpy.exceptions">numpy.exceptions</a>
  &#8226;   <a href="#numpy.expand_dims">numpy.expand_dims</a>
  &#8226;   <a href="#numpy.eye">numpy.eye</a>
  &#8226;   <a href="#numpy.fft">numpy.fft</a>
@@ -17816,6 +17901,9 @@ imports:
  &#8226;   <a href="#numpy.int8">numpy.int8</a>
  &#8226;   <a href="#numpy.integer">numpy.integer</a>
  &#8226;   <a href="#numpy.iscomplexobj">numpy.iscomplexobj</a>
+ &#8226;   <a href="#numpy.isfinite">numpy.isfinite</a>
+ &#8226;   <a href="#numpy.isinf">numpy.isinf</a>
+ &#8226;   <a href="#numpy.isnan">numpy.isnan</a>
  &#8226;   <a href="#numpy.lib">numpy.lib</a>
  &#8226;   <a href="#numpy.linalg">numpy.linalg</a>
  &#8226;   <a href="#numpy.ma">numpy.ma</a>
@@ -17846,11 +17934,15 @@ imports:
   <div class="import">
 imported by:
     <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#appr_invertible_matrix">appr_invertible_matrix</a>
+ &#8226;   <a href="#appr_invertible_mueller_matrix">appr_invertible_mueller_matrix</a>
+ &#8226;   <a href="#appr_k_primitive">appr_k_primitive</a>
+ &#8226;   <a href="#appr_mueller_matrix">appr_mueller_matrix</a>
  &#8226;   <a href="#contourpy">contourpy</a>
  &#8226;   <a href="#ecm">ecm</a>
  &#8226;   <a href="#index.py">index.py</a>
  &#8226;   <a href="#k_irreducible">k_irreducible</a>
- &#8226;   <a href="#k_strongly_irreducible">k_strongly_irreducible</a>
+ &#8226;   <a href="#k_primitive">k_primitive</a>
  &#8226;   <a href="#matplotlib">matplotlib</a>
  &#8226;   <a href="#matplotlib._cm">matplotlib._cm</a>
  &#8226;   <a href="#matplotlib._constrained_layout">matplotlib._constrained_layout</a>
@@ -17931,8 +18023,8 @@ imported by:
  &#8226;   <a href="#numpy._typing">numpy._typing</a>
  &#8226;   <a href="#numpy._typing._array_like">numpy._typing._array_like</a>
  &#8226;   <a href="#numpy._typing._dtype_like">numpy._typing._dtype_like</a>
- &#8226;   <a href="#numpy._typing._generic_alias">numpy._typing._generic_alias</a>
  &#8226;   <a href="#numpy._typing._scalars">numpy._typing._scalars</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy._version">numpy._version</a>
  &#8226;   <a href="#numpy.array_api">numpy.array_api</a>
  &#8226;   <a href="#numpy.array_api._array_object">numpy.array_api._array_object</a>
@@ -17941,6 +18033,7 @@ imported by:
  &#8226;   <a href="#numpy.array_api._data_type_functions">numpy.array_api._data_type_functions</a>
  &#8226;   <a href="#numpy.array_api._dtypes">numpy.array_api._dtypes</a>
  &#8226;   <a href="#numpy.array_api._elementwise_functions">numpy.array_api._elementwise_functions</a>
+ &#8226;   <a href="#numpy.array_api._indexing_functions">numpy.array_api._indexing_functions</a>
  &#8226;   <a href="#numpy.array_api._manipulation_functions">numpy.array_api._manipulation_functions</a>
  &#8226;   <a href="#numpy.array_api._searching_functions">numpy.array_api._searching_functions</a>
  &#8226;   <a href="#numpy.array_api._set_functions">numpy.array_api._set_functions</a>
@@ -17957,10 +18050,12 @@ imported by:
  &#8226;   <a href="#numpy.core.arrayprint">numpy.core.arrayprint</a>
  &#8226;   <a href="#numpy.core.defchararray">numpy.core.defchararray</a>
  &#8226;   <a href="#numpy.core.fromnumeric">numpy.core.fromnumeric</a>
+ &#8226;   <a href="#numpy.core.function_base">numpy.core.function_base</a>
  &#8226;   <a href="#numpy.core.memmap">numpy.core.memmap</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
  &#8226;   <a href="#numpy.ctypeslib">numpy.ctypeslib</a>
- &#8226;   <a href="#numpy.distutils">numpy.distutils</a>
+ &#8226;   <a href="#numpy.dtypes">numpy.dtypes</a>
+ &#8226;   <a href="#numpy.exceptions">numpy.exceptions</a>
  &#8226;   <a href="#numpy.fft">numpy.fft</a>
  &#8226;   <a href="#numpy.lib">numpy.lib</a>
  &#8226;   <a href="#numpy.lib._iotools">numpy.lib._iotools</a>
@@ -17969,8 +18064,10 @@ imported by:
  &#8226;   <a href="#numpy.lib.format">numpy.lib.format</a>
  &#8226;   <a href="#numpy.lib.function_base">numpy.lib.function_base</a>
  &#8226;   <a href="#numpy.lib.histograms">numpy.lib.histograms</a>
+ &#8226;   <a href="#numpy.lib.index_tricks">numpy.lib.index_tricks</a>
  &#8226;   <a href="#numpy.lib.nanfunctions">numpy.lib.nanfunctions</a>
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
+ &#8226;   <a href="#numpy.lib.recfunctions">numpy.lib.recfunctions</a>
  &#8226;   <a href="#numpy.lib.stride_tricks">numpy.lib.stride_tricks</a>
  &#8226;   <a href="#numpy.lib.twodim_base">numpy.lib.twodim_base</a>
  &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
@@ -17992,17 +18089,17 @@ imported by:
  &#8226;   <a href="#numpy.polynomial.polyutils">numpy.polynomial.polyutils</a>
  &#8226;   <a href="#numpy.random">numpy.random</a>
  &#8226;   <a href="#numpy.testing">numpy.testing</a>
- &#8226;   <a href="#numpy.testing._private.noseclasses">numpy.testing._private.noseclasses</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
+ &#8226;   <a href="#numpy.testing.overrides">numpy.testing.overrides</a>
  &#8226;   <a href="#numpy.typing">numpy.typing</a>
  &#8226;   <a href="#numpy.version">numpy.version</a>
  &#8226;   <a href="#sympy.core.sympify">sympy.core.sympify</a>
  &#8226;   <a href="#sympy.matrices.common">sympy.matrices.common</a>
  &#8226;   <a href="#sympy.matrices.dense">sympy.matrices.dense</a>
  &#8226;   <a href="#sympy.matrices.expressions.matexpr">sympy.matrices.expressions.matexpr</a>
- &#8226;   <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
  &#8226;   <a href="#utils.format_print_matrix">utils.format_print_matrix</a>
+ &#8226;   <a href="#utils.matrix_norm">utils.matrix_norm</a>
+ &#8226;   <a href="#utils.request_matrix">utils.request_matrix</a>
  &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
 
   </div>
@@ -18055,6 +18152,7 @@ imported by:
 imports:
     <a href="#enum">enum</a>
  &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
 
   </div>
   <div class="import">
@@ -18083,7 +18181,6 @@ imports:
 imported by:
     <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
- &#8226;   <a href="#numpy.distutils">numpy.distutils</a>
  &#8226;   <a href="#numpy.fft">numpy.fft</a>
  &#8226;   <a href="#numpy.lib">numpy.lib</a>
  &#8226;   <a href="#numpy.linalg">numpy.linalg</a>
@@ -18109,12 +18206,11 @@ imports:
  &#8226;   <a href="#numpy._typing._array_like">numpy._typing._array_like</a>
  &#8226;   <a href="#numpy._typing._char_codes">numpy._typing._char_codes</a>
  &#8226;   <a href="#numpy._typing._dtype_like">numpy._typing._dtype_like</a>
- &#8226;   <a href="#numpy._typing._generic_alias">numpy._typing._generic_alias</a>
  &#8226;   <a href="#numpy._typing._nbit">numpy._typing._nbit</a>
  &#8226;   <a href="#numpy._typing._nested_sequence">numpy._typing._nested_sequence</a>
  &#8226;   <a href="#numpy._typing._scalars">numpy._typing._scalars</a>
  &#8226;   <a href="#numpy._typing._shape">numpy._typing._shape</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.ufunc">numpy.ufunc</a>
  &#8226;   <a href="#typing">typing</a>
 
@@ -18125,11 +18221,11 @@ imported by:
  &#8226;   <a href="#numpy._typing._array_like">numpy._typing._array_like</a>
  &#8226;   <a href="#numpy._typing._char_codes">numpy._typing._char_codes</a>
  &#8226;   <a href="#numpy._typing._dtype_like">numpy._typing._dtype_like</a>
- &#8226;   <a href="#numpy._typing._generic_alias">numpy._typing._generic_alias</a>
  &#8226;   <a href="#numpy._typing._nbit">numpy._typing._nbit</a>
  &#8226;   <a href="#numpy._typing._nested_sequence">numpy._typing._nested_sequence</a>
  &#8226;   <a href="#numpy._typing._scalars">numpy._typing._scalars</a>
  &#8226;   <a href="#numpy._typing._shape">numpy._typing._shape</a>
+ &#8226;   <a href="#numpy.linalg.linalg">numpy.linalg.linalg</a>
  &#8226;   <a href="#numpy.typing">numpy.typing</a>
 
   </div>
@@ -18142,7 +18238,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#numpy._typing">numpy._typing</a>
- &#8226;   <a href="#numpy._typing._generic_alias">numpy._typing._generic_alias</a>
+ &#8226;   <a href="#numpy._typing._array_like">numpy._typing._array_like</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#textwrap">textwrap</a>
 
@@ -18180,13 +18276,13 @@ imports:
  &#8226;   <a href="#numpy.timedelta64">numpy.timedelta64</a>
  &#8226;   <a href="#numpy.unsignedinteger">numpy.unsignedinteger</a>
  &#8226;   <a href="#numpy.void">numpy.void</a>
- &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#typing">typing</a>
 
   </div>
   <div class="import">
 imported by:
     <a href="#numpy._typing">numpy._typing</a>
+ &#8226;   <a href="#numpy._typing._add_docstring">numpy._typing._add_docstring</a>
 
   </div>
 
@@ -18215,10 +18311,10 @@ imported by:
   <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/_typing/_dtype_like.py" type="text/plain"><tt>numpy._typing._dtype_like</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#numpy">numpy</a>
+    <a href="#collections.abc">collections.abc</a>
+ &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy._typing">numpy._typing</a>
  &#8226;   <a href="#numpy._typing._char_codes">numpy._typing._char_codes</a>
- &#8226;   <a href="#numpy._typing._generic_alias">numpy._typing._generic_alias</a>
  &#8226;   <a href="#numpy._typing._shape">numpy._typing._shape</a>
  &#8226;   <a href="#typing">typing</a>
 
@@ -18226,30 +18322,6 @@ imports:
   <div class="import">
 imported by:
     <a href="#numpy._typing">numpy._typing</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="numpy._typing._generic_alias"></a>
-  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/_typing/_generic_alias.py" type="text/plain"><tt>numpy._typing._generic_alias</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#__future__">__future__</a>
- &#8226;   <a href="#collections.abc">collections.abc</a>
- &#8226;   <a href="#numpy">numpy</a>
- &#8226;   <a href="#numpy._typing">numpy._typing</a>
- &#8226;   <a href="#sys">sys</a>
- &#8226;   <a href="#types">types</a>
- &#8226;   <a href="#typing">typing</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#numpy._typing">numpy._typing</a>
- &#8226;   <a href="#numpy._typing._add_docstring">numpy._typing._add_docstring</a>
- &#8226;   <a href="#numpy._typing._dtype_like">numpy._typing._dtype_like</a>
 
   </div>
 
@@ -18278,6 +18350,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#__future__">__future__</a>
+ &#8226;   <a href="#collections.abc">collections.abc</a>
  &#8226;   <a href="#numpy._typing">numpy._typing</a>
  &#8226;   <a href="#typing">typing</a>
 
@@ -18314,7 +18387,8 @@ imported by:
   <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/_typing/_shape.py" type="text/plain"><tt>numpy._typing._shape</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#numpy._typing">numpy._typing</a>
+    <a href="#collections.abc">collections.abc</a>
+ &#8226;   <a href="#numpy._typing">numpy._typing</a>
  &#8226;   <a href="#typing">typing</a>
 
   </div>
@@ -18322,6 +18396,61 @@ imports:
 imported by:
     <a href="#numpy._typing">numpy._typing</a>
  &#8226;   <a href="#numpy._typing._dtype_like">numpy._typing._dtype_like</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="numpy._utils"></a>
+  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/_utils/__init__.py" type="text/plain"><tt>numpy._utils</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#numpy">numpy</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#numpy._globals">numpy._globals</a>
+ &#8226;   <a href="#numpy._typing">numpy._typing</a>
+ &#8226;   <a href="#numpy._utils._inspect">numpy._utils._inspect</a>
+ &#8226;   <a href="#numpy.compat">numpy.compat</a>
+ &#8226;   <a href="#numpy.core._exceptions">numpy.core._exceptions</a>
+ &#8226;   <a href="#numpy.core._machar">numpy.core._machar</a>
+ &#8226;   <a href="#numpy.core._ufunc_config">numpy.core._ufunc_config</a>
+ &#8226;   <a href="#numpy.core.defchararray">numpy.core.defchararray</a>
+ &#8226;   <a href="#numpy.core.fromnumeric">numpy.core.fromnumeric</a>
+ &#8226;   <a href="#numpy.core.getlimits">numpy.core.getlimits</a>
+ &#8226;   <a href="#numpy.core.memmap">numpy.core.memmap</a>
+ &#8226;   <a href="#numpy.core.numerictypes">numpy.core.numerictypes</a>
+ &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
+ &#8226;   <a href="#numpy.core.records">numpy.core.records</a>
+ &#8226;   <a href="#numpy.lib._datasource">numpy.lib._datasource</a>
+ &#8226;   <a href="#numpy.lib.function_base">numpy.lib.function_base</a>
+ &#8226;   <a href="#numpy.lib.index_tricks">numpy.lib.index_tricks</a>
+ &#8226;   <a href="#numpy.lib.polynomial">numpy.lib.polynomial</a>
+ &#8226;   <a href="#numpy.lib.type_check">numpy.lib.type_check</a>
+ &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
+ &#8226;   <a href="#numpy.linalg.linalg">numpy.linalg.linalg</a>
+ &#8226;   <a href="#numpy.matrixlib.defmatrix">numpy.matrixlib.defmatrix</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="numpy._utils._inspect"></a>
+  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/_utils/_inspect.py" type="text/plain"><tt>numpy._utils._inspect</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#numpy._utils">numpy._utils</a>
+ &#8226;   <a href="#types">types</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#numpy.compat">numpy.compat</a>
+ &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
 
   </div>
 
@@ -18394,6 +18523,7 @@ imports:
  &#8226;   <a href="#numpy.array_api._data_type_functions">numpy.array_api._data_type_functions</a>
  &#8226;   <a href="#numpy.array_api._dtypes">numpy.array_api._dtypes</a>
  &#8226;   <a href="#numpy.array_api._elementwise_functions">numpy.array_api._elementwise_functions</a>
+ &#8226;   <a href="#numpy.array_api._indexing_functions">numpy.array_api._indexing_functions</a>
  &#8226;   <a href="#numpy.array_api._manipulation_functions">numpy.array_api._manipulation_functions</a>
  &#8226;   <a href="#numpy.array_api._searching_functions">numpy.array_api._searching_functions</a>
  &#8226;   <a href="#numpy.array_api._set_functions">numpy.array_api._set_functions</a>
@@ -18415,6 +18545,7 @@ imported by:
  &#8226;   <a href="#numpy.array_api._data_type_functions">numpy.array_api._data_type_functions</a>
  &#8226;   <a href="#numpy.array_api._dtypes">numpy.array_api._dtypes</a>
  &#8226;   <a href="#numpy.array_api._elementwise_functions">numpy.array_api._elementwise_functions</a>
+ &#8226;   <a href="#numpy.array_api._indexing_functions">numpy.array_api._indexing_functions</a>
  &#8226;   <a href="#numpy.array_api._manipulation_functions">numpy.array_api._manipulation_functions</a>
  &#8226;   <a href="#numpy.array_api._searching_functions">numpy.array_api._searching_functions</a>
  &#8226;   <a href="#numpy.array_api._set_functions">numpy.array_api._set_functions</a>
@@ -18453,6 +18584,7 @@ imported by:
     <a href="#numpy.array_api._creation_functions">numpy.array_api._creation_functions</a>
  &#8226;   <a href="#numpy.array_api._data_type_functions">numpy.array_api._data_type_functions</a>
  &#8226;   <a href="#numpy.array_api._elementwise_functions">numpy.array_api._elementwise_functions</a>
+ &#8226;   <a href="#numpy.array_api._indexing_functions">numpy.array_api._indexing_functions</a>
  &#8226;   <a href="#numpy.array_api._manipulation_functions">numpy.array_api._manipulation_functions</a>
  &#8226;   <a href="#numpy.array_api._searching_functions">numpy.array_api._searching_functions</a>
  &#8226;   <a href="#numpy.array_api._set_functions">numpy.array_api._set_functions</a>
@@ -18502,7 +18634,6 @@ imports:
 imported by:
     <a href="#numpy.array_api">numpy.array_api</a>
  &#8226;   <a href="#numpy.array_api._array_object">numpy.array_api._array_object</a>
- &#8226;   <a href="#numpy.array_api._statistical_functions">numpy.array_api._statistical_functions</a>
 
   </div>
 
@@ -18549,7 +18680,9 @@ imported by:
  &#8226;   <a href="#numpy.array_api._creation_functions">numpy.array_api._creation_functions</a>
  &#8226;   <a href="#numpy.array_api._data_type_functions">numpy.array_api._data_type_functions</a>
  &#8226;   <a href="#numpy.array_api._elementwise_functions">numpy.array_api._elementwise_functions</a>
+ &#8226;   <a href="#numpy.array_api._indexing_functions">numpy.array_api._indexing_functions</a>
  &#8226;   <a href="#numpy.array_api._searching_functions">numpy.array_api._searching_functions</a>
+ &#8226;   <a href="#numpy.array_api._sorting_functions">numpy.array_api._sorting_functions</a>
  &#8226;   <a href="#numpy.array_api._statistical_functions">numpy.array_api._statistical_functions</a>
  &#8226;   <a href="#numpy.array_api.linalg">numpy.array_api.linalg</a>
 
@@ -18573,6 +18706,26 @@ imports:
 imported by:
     <a href="#numpy.array_api">numpy.array_api</a>
  &#8226;   <a href="#numpy.array_api._array_object">numpy.array_api._array_object</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="numpy.array_api._indexing_functions"></a>
+  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/array_api/_indexing_functions.py" type="text/plain"><tt>numpy.array_api._indexing_functions</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.array_api">numpy.array_api</a>
+ &#8226;   <a href="#numpy.array_api._array_object">numpy.array_api._array_object</a>
+ &#8226;   <a href="#numpy.array_api._dtypes">numpy.array_api._dtypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#numpy.array_api">numpy.array_api</a>
 
   </div>
 
@@ -18650,6 +18803,7 @@ imports:
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.array_api">numpy.array_api</a>
  &#8226;   <a href="#numpy.array_api._array_object">numpy.array_api._array_object</a>
+ &#8226;   <a href="#numpy.array_api._dtypes">numpy.array_api._dtypes</a>
 
   </div>
   <div class="import">
@@ -18669,7 +18823,6 @@ imports:
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.array_api">numpy.array_api</a>
  &#8226;   <a href="#numpy.array_api._array_object">numpy.array_api._array_object</a>
- &#8226;   <a href="#numpy.array_api._creation_functions">numpy.array_api._creation_functions</a>
  &#8226;   <a href="#numpy.array_api._dtypes">numpy.array_api._dtypes</a>
  &#8226;   <a href="#numpy.array_api._typing">numpy.array_api._typing</a>
  &#8226;   <a href="#typing">typing</a>
@@ -18703,7 +18856,6 @@ imports:
  &#8226;   <a href="#numpy.uint32">numpy.uint32</a>
  &#8226;   <a href="#numpy.uint64">numpy.uint64</a>
  &#8226;   <a href="#numpy.uint8">numpy.uint8</a>
- &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#typing">typing</a>
 
   </div>
@@ -18799,8 +18951,9 @@ imported by:
 <span class="moduletype">Package</span>  <div class="import">
 imports:
     <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
+ &#8226;   <a href="#numpy._utils._inspect">numpy._utils._inspect</a>
  &#8226;   <a href="#numpy.compat">numpy.compat</a>
- &#8226;   <a href="#numpy.compat._inspect">numpy.compat._inspect</a>
  &#8226;   <a href="#numpy.compat.py3k">numpy.compat.py3k</a>
 
   </div>
@@ -18808,7 +18961,6 @@ imports:
 imported by:
     <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.compat">numpy.compat</a>
- &#8226;   <a href="#numpy.compat._inspect">numpy.compat._inspect</a>
  &#8226;   <a href="#numpy.compat.py3k">numpy.compat.py3k</a>
  &#8226;   <a href="#numpy.core._methods">numpy.core._methods</a>
  &#8226;   <a href="#numpy.core._type_aliases">numpy.core._type_aliases</a>
@@ -18820,24 +18972,6 @@ imported by:
  &#8226;   <a href="#numpy.lib.format">numpy.lib.format</a>
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
  &#8226;   <a href="#numpy.ma.core">numpy.ma.core</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="numpy.compat._inspect"></a>
-  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/compat/_inspect.py" type="text/plain"><tt>numpy.compat._inspect</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#numpy.compat">numpy.compat</a>
- &#8226;   <a href="#types">types</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#numpy.compat">numpy.compat</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
 
   </div>
 
@@ -18940,12 +19074,12 @@ imports:
  &#8226;   <a href="#numpy.core.integer">numpy.core.integer</a>
  &#8226;   <a href="#numpy.core.intp">numpy.core.intp</a>
  &#8226;   <a href="#numpy.core.isfinite">numpy.core.isfinite</a>
- &#8226;   <a href="#numpy.core.isinf">numpy.core.isinf</a>
  &#8226;   <a href="#numpy.core.isnan">numpy.core.isnan</a>
  &#8226;   <a href="#numpy.core.isnat">numpy.core.isnat</a>
  &#8226;   <a href="#numpy.core.isscalar">numpy.core.isscalar</a>
  &#8226;   <a href="#numpy.core.linspace">numpy.core.linspace</a>
  &#8226;   <a href="#numpy.core.matmul">numpy.core.matmul</a>
+ &#8226;   <a href="#numpy.core.max">numpy.core.max</a>
  &#8226;   <a href="#numpy.core.memmap">numpy.core.memmap</a>
  &#8226;   <a href="#numpy.core.moveaxis">numpy.core.moveaxis</a>
  &#8226;   <a href="#numpy.core.multiarray">numpy.core.multiarray</a>
@@ -18958,7 +19092,7 @@ imports:
  &#8226;   <a href="#numpy.core.object_">numpy.core.object_</a>
  &#8226;   <a href="#numpy.core.ones">numpy.core.ones</a>
  &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
- &#8226;   <a href="#numpy.core.product">numpy.core.product</a>
+ &#8226;   <a href="#numpy.core.prod">numpy.core.prod</a>
  &#8226;   <a href="#numpy.core.reciprocal">numpy.core.reciprocal</a>
  &#8226;   <a href="#numpy.core.records">numpy.core.records</a>
  &#8226;   <a href="#numpy.core.result_type">numpy.core.result_type</a>
@@ -19148,15 +19282,14 @@ imported by:
   <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/core/_exceptions.py" type="text/plain"><tt>numpy.core._exceptions</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#numpy.core">numpy.core</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
+    <a href="#numpy._utils">numpy._utils</a>
+ &#8226;   <a href="#numpy.core">numpy.core</a>
 
   </div>
   <div class="import">
 imported by:
     <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._methods">numpy.core._methods</a>
- &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
 
   </div>
 
@@ -19172,6 +19305,7 @@ imports:
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core.multiarray">numpy.core.multiarray</a>
+ &#8226;   <a href="#numpy.exceptions">numpy.exceptions</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#warnings">warnings</a>
@@ -19192,10 +19326,10 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#math">math</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._ufunc_config">numpy.core._ufunc_config</a>
  &#8226;   <a href="#numpy.core.fromnumeric">numpy.core.fromnumeric</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
 
   </div>
   <div class="import">
@@ -19218,7 +19352,6 @@ imports:
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._exceptions">numpy.core._exceptions</a>
  &#8226;   <a href="#numpy.core._ufunc_config">numpy.core._ufunc_config</a>
- &#8226;   <a href="#numpy.core.fromnumeric">numpy.core.fromnumeric</a>
  &#8226;   <a href="#numpy.core.multiarray">numpy.core.multiarray</a>
  &#8226;   <a href="#numpy.core.numerictypes">numpy.core.numerictypes</a>
  &#8226;   <a href="#numpy.core.umath">numpy.core.umath</a>
@@ -19244,7 +19377,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#numpy.testing._private.noseclasses">numpy.testing._private.noseclasses</a>
+    <a href="#numpy">numpy</a>
 
   </div>
 
@@ -19316,8 +19449,8 @@ imports:
     <a href="#collections.abc">collections.abc</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#contextvars">contextvars</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
  &#8226;   <a href="#numpy.core.umath">numpy.core.umath</a>
 
   </div>
@@ -19617,6 +19750,7 @@ imported by:
 imports:
     <a href="#functools">functools</a>
  &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.compat">numpy.compat</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core.multiarray">numpy.core.multiarray</a>
@@ -19774,6 +19908,7 @@ imported by:
 imports:
     <a href="#functools">functools</a>
  &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._methods">numpy.core._methods</a>
  &#8226;   <a href="#numpy.core.multiarray">numpy.core.multiarray</a>
@@ -19788,7 +19923,6 @@ imports:
 imported by:
     <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._machar">numpy.core._machar</a>
- &#8226;   <a href="#numpy.core._methods">numpy.core._methods</a>
  &#8226;   <a href="#numpy.core.arrayprint">numpy.core.arrayprint</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
  &#8226;   <a href="#numpy.core.shape_base">numpy.core.shape_base</a>
@@ -19806,6 +19940,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#functools">functools</a>
+ &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core.multiarray">numpy.core.multiarray</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
@@ -19843,11 +19978,11 @@ imported by:
   <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/core/getlimits.py" type="text/plain"><tt>numpy.core.getlimits</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#numpy.core">numpy.core</a>
+    <a href="#numpy._utils">numpy._utils</a>
+ &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._machar">numpy.core._machar</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
  &#8226;   <a href="#numpy.core.numerictypes">numpy.core.numerictypes</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
  &#8226;   <a href="#numpy.core.umath">numpy.core.umath</a>
  &#8226;   <a href="#warnings">warnings</a>
 
@@ -19953,19 +20088,6 @@ imported by:
 imported by:
     <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.linalg.linalg">numpy.linalg.linalg</a>
- &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="numpy.core.isinf"></a>
-  <a target="code" href="" type="text/plain"><tt>numpy.core.isinf</tt></a>
-<span class="moduletype">MissingModule</span>  <div class="import">
-imported by:
-    <a href="#numpy.core">numpy.core</a>
- &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
 
   </div>
 
@@ -20034,6 +20156,18 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="numpy.core.max"></a>
+  <a target="code" href="" type="text/plain"><tt>numpy.core.max</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#numpy.core">numpy.core</a>
+ &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="numpy.core.memmap"></a>
   <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/core/memmap.py" type="text/plain"><tt>numpy.core.memmap</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -20042,10 +20176,10 @@ imports:
  &#8226;   <a href="#mmap">mmap</a>
  &#8226;   <a href="#ntpath">ntpath</a>
  &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.compat">numpy.compat</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
 
   </div>
   <div class="import">
@@ -20169,13 +20303,13 @@ imported by:
   <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/core/numeric.py" type="text/plain"><tt>numpy.core.numeric</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#functools">functools</a>
+    <a href="#builtins">builtins</a>
+ &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#itertools">itertools</a>
  &#8226;   <a href="#numbers">numbers</a>
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._asarray">numpy.core._asarray</a>
- &#8226;   <a href="#numpy.core._exceptions">numpy.core._exceptions</a>
  &#8226;   <a href="#numpy.core._ufunc_config">numpy.core._ufunc_config</a>
  &#8226;   <a href="#numpy.core.arrayprint">numpy.core.arrayprint</a>
  &#8226;   <a href="#numpy.core.fromnumeric">numpy.core.fromnumeric</a>
@@ -20184,6 +20318,7 @@ imports:
  &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
  &#8226;   <a href="#numpy.core.shape_base">numpy.core.shape_base</a>
  &#8226;   <a href="#numpy.core.umath">numpy.core.umath</a>
+ &#8226;   <a href="#numpy.exceptions">numpy.exceptions</a>
  &#8226;   <a href="#numpy.eye">numpy.eye</a>
  &#8226;   <a href="#operator">operator</a>
  &#8226;   <a href="#sys">sys</a>
@@ -20227,13 +20362,14 @@ imported by:
 imports:
     <a href="#builtins">builtins</a>
  &#8226;   <a href="#numbers">numbers</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.compat">numpy.compat</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._dtype">numpy.core._dtype</a>
  &#8226;   <a href="#numpy.core._string_helpers">numpy.core._string_helpers</a>
  &#8226;   <a href="#numpy.core._type_aliases">numpy.core._type_aliases</a>
  &#8226;   <a href="#numpy.core.multiarray">numpy.core.multiarray</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
+ &#8226;   <a href="#warnings">warnings</a>
 
   </div>
   <div class="import">
@@ -20290,7 +20426,8 @@ imported by:
 imports:
     <a href="#collections">collections</a>
  &#8226;   <a href="#functools">functools</a>
- &#8226;   <a href="#numpy.compat._inspect">numpy.compat._inspect</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
+ &#8226;   <a href="#numpy._utils._inspect">numpy._utils._inspect</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._multiarray_umath">numpy.core._multiarray_umath</a>
  &#8226;   <a href="#os">os</a>
@@ -20298,28 +20435,19 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#numpy._typing">numpy._typing</a>
- &#8226;   <a href="#numpy.core">numpy.core</a>
+    <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._add_newdocs">numpy.core._add_newdocs</a>
  &#8226;   <a href="#numpy.core._asarray">numpy.core._asarray</a>
- &#8226;   <a href="#numpy.core._exceptions">numpy.core._exceptions</a>
- &#8226;   <a href="#numpy.core._machar">numpy.core._machar</a>
- &#8226;   <a href="#numpy.core._ufunc_config">numpy.core._ufunc_config</a>
  &#8226;   <a href="#numpy.core.arrayprint">numpy.core.arrayprint</a>
  &#8226;   <a href="#numpy.core.defchararray">numpy.core.defchararray</a>
  &#8226;   <a href="#numpy.core.einsumfunc">numpy.core.einsumfunc</a>
  &#8226;   <a href="#numpy.core.fromnumeric">numpy.core.fromnumeric</a>
  &#8226;   <a href="#numpy.core.function_base">numpy.core.function_base</a>
- &#8226;   <a href="#numpy.core.getlimits">numpy.core.getlimits</a>
- &#8226;   <a href="#numpy.core.memmap">numpy.core.memmap</a>
  &#8226;   <a href="#numpy.core.multiarray">numpy.core.multiarray</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
- &#8226;   <a href="#numpy.core.numerictypes">numpy.core.numerictypes</a>
- &#8226;   <a href="#numpy.core.records">numpy.core.records</a>
  &#8226;   <a href="#numpy.core.shape_base">numpy.core.shape_base</a>
  &#8226;   <a href="#numpy.fft._pocketfft">numpy.fft._pocketfft</a>
  &#8226;   <a href="#numpy.fft.helper">numpy.fft.helper</a>
- &#8226;   <a href="#numpy.lib._datasource">numpy.lib._datasource</a>
  &#8226;   <a href="#numpy.lib.arraypad">numpy.lib.arraypad</a>
  &#8226;   <a href="#numpy.lib.arraysetops">numpy.lib.arraysetops</a>
  &#8226;   <a href="#numpy.lib.function_base">numpy.lib.function_base</a>
@@ -20328,23 +20456,23 @@ imported by:
  &#8226;   <a href="#numpy.lib.nanfunctions">numpy.lib.nanfunctions</a>
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
  &#8226;   <a href="#numpy.lib.polynomial">numpy.lib.polynomial</a>
+ &#8226;   <a href="#numpy.lib.recfunctions">numpy.lib.recfunctions</a>
  &#8226;   <a href="#numpy.lib.scimath">numpy.lib.scimath</a>
  &#8226;   <a href="#numpy.lib.shape_base">numpy.lib.shape_base</a>
  &#8226;   <a href="#numpy.lib.stride_tricks">numpy.lib.stride_tricks</a>
  &#8226;   <a href="#numpy.lib.twodim_base">numpy.lib.twodim_base</a>
  &#8226;   <a href="#numpy.lib.type_check">numpy.lib.type_check</a>
  &#8226;   <a href="#numpy.lib.ufunclike">numpy.lib.ufunclike</a>
- &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
  &#8226;   <a href="#numpy.linalg.linalg">numpy.linalg.linalg</a>
- &#8226;   <a href="#numpy.matrixlib.defmatrix">numpy.matrixlib.defmatrix</a>
+ &#8226;   <a href="#numpy.testing.overrides">numpy.testing.overrides</a>
 
   </div>
 
 </div>
 
 <div class="node">
-  <a name="numpy.core.product"></a>
-  <a target="code" href="" type="text/plain"><tt>numpy.core.product</tt></a>
+  <a name="numpy.core.prod"></a>
+  <a target="code" href="" type="text/plain"><tt>numpy.core.prod</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
     <a href="#numpy.core">numpy.core</a>
@@ -20373,12 +20501,12 @@ imported by:
 imports:
     <a href="#collections">collections</a>
  &#8226;   <a href="#contextlib">contextlib</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.compat">numpy.compat</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core.arrayprint">numpy.core.arrayprint</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
  &#8226;   <a href="#numpy.core.numerictypes">numpy.core.numerictypes</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
  &#8226;   <a href="#warnings">warnings</a>
 
   </div>
@@ -20561,6 +20689,7 @@ imported by:
  &#8226;   <a href="#numpy.lib.mixins">numpy.lib.mixins</a>
  &#8226;   <a href="#numpy.ma.core">numpy.ma.core</a>
  &#8226;   <a href="#numpy.polynomial.polyutils">numpy.polynomial.polyutils</a>
+ &#8226;   <a href="#numpy.testing.overrides">numpy.testing.overrides</a>
 
   </div>
 
@@ -20604,7 +20733,8 @@ imports:
  &#8226;   <a href="#numpy.integer">numpy.integer</a>
  &#8226;   <a href="#numpy.ndarray">numpy.ndarray</a>
  &#8226;   <a href="#os">os</a>
- &#8226;   <a href="#warnings">warnings</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#sysconfig">sysconfig</a>
 
   </div>
   <div class="import">
@@ -20628,51 +20758,6 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="numpy.distutils"></a>
-  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/distutils/__init__.py" type="text/plain"><tt>numpy.distutils</tt></a>
-<span class="moduletype">Package</span>  <div class="import">
-imports:
-    <a href="#numpy">numpy</a>
- &#8226;   <a href="#numpy._pytesttester">numpy._pytesttester</a>
- &#8226;   <a href="#numpy.distutils.cpuinfo">numpy.distutils.cpuinfo</a>
- &#8226;   <a href="#warnings">warnings</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#numpy.distutils.cpuinfo">numpy.distutils.cpuinfo</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="numpy.distutils.cpuinfo"></a>
-  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/distutils/cpuinfo.py" type="text/plain"><tt>numpy.distutils.cpuinfo</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#numpy.distutils">numpy.distutils</a>
- &#8226;   <a href="#os">os</a>
- &#8226;   <a href="#platform">platform</a>
- &#8226;   <a href="#re">re</a>
- &#8226;   <a href="#subprocess">subprocess</a>
- &#8226;   <a href="#sys">sys</a>
- &#8226;   <a href="#types">types</a>
- &#8226;   <a href="#warnings">warnings</a>
- &#8226;   <a href="#winreg">winreg</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#numpy.distutils">numpy.distutils</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
-
-  </div>
-
-</div>
-
-<div class="node">
   <a name="numpy.dtype"></a>
   <a target="code" href="" type="text/plain"><tt>numpy.dtype</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
@@ -20682,6 +20767,42 @@ imported by:
  &#8226;   <a href="#numpy.array_api._typing">numpy.array_api._typing</a>
  &#8226;   <a href="#numpy.ctypeslib">numpy.ctypeslib</a>
  &#8226;   <a href="#numpy.ma.mrecords">numpy.ma.mrecords</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="numpy.dtypes"></a>
+  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/dtypes.py" type="text/plain"><tt>numpy.dtypes</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.dtypes">numpy.dtypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.dtypes">numpy.dtypes</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="numpy.exceptions"></a>
+  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/exceptions.py" type="text/plain"><tt>numpy.exceptions</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#numpy">numpy</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.core._internal">numpy.core._internal</a>
+ &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
 
   </div>
 
@@ -20935,6 +21056,42 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="numpy.isfinite"></a>
+  <a target="code" href="" type="text/plain"><tt>numpy.isfinite</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="numpy.isinf"></a>
+  <a target="code" href="" type="text/plain"><tt>numpy.isinf</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="numpy.isnan"></a>
+  <a target="code" href="" type="text/plain"><tt>numpy.isnan</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="numpy.lib"></a>
   <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/lib/__init__.py" type="text/plain"><tt>numpy.lib</tt></a>
 <span class="moduletype">Package</span>  <div class="import">
@@ -20959,6 +21116,7 @@ imports:
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
  &#8226;   <a href="#numpy.lib.polynomial">numpy.lib.polynomial</a>
  &#8226;   <a href="#numpy.lib.real">numpy.lib.real</a>
+ &#8226;   <a href="#numpy.lib.recfunctions">numpy.lib.recfunctions</a>
  &#8226;   <a href="#numpy.lib.scimath">numpy.lib.scimath</a>
  &#8226;   <a href="#numpy.lib.shape_base">numpy.lib.shape_base</a>
  &#8226;   <a href="#numpy.lib.stride_tricks">numpy.lib.stride_tricks</a>
@@ -20967,6 +21125,7 @@ imports:
  &#8226;   <a href="#numpy.lib.ufunclike">numpy.lib.ufunclike</a>
  &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
  &#8226;   <a href="#numpy.version">numpy.version</a>
+ &#8226;   <a href="#warnings">warnings</a>
 
   </div>
   <div class="import">
@@ -20987,6 +21146,7 @@ imported by:
  &#8226;   <a href="#numpy.lib.nanfunctions">numpy.lib.nanfunctions</a>
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
  &#8226;   <a href="#numpy.lib.polynomial">numpy.lib.polynomial</a>
+ &#8226;   <a href="#numpy.lib.recfunctions">numpy.lib.recfunctions</a>
  &#8226;   <a href="#numpy.lib.scimath">numpy.lib.scimath</a>
  &#8226;   <a href="#numpy.lib.shape_base">numpy.lib.shape_base</a>
  &#8226;   <a href="#numpy.lib.stride_tricks">numpy.lib.stride_tricks</a>
@@ -20995,6 +21155,7 @@ imported by:
  &#8226;   <a href="#numpy.lib.ufunclike">numpy.lib.ufunclike</a>
  &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
+ &#8226;   <a href="#numpy.testing.overrides">numpy.testing.overrides</a>
 
   </div>
 
@@ -21009,7 +21170,7 @@ imports:
  &#8226;   <a href="#gzip">gzip</a>
  &#8226;   <a href="#io">io</a>
  &#8226;   <a href="#lzma">lzma</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.lib">numpy.lib</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#shutil">shutil</a>
@@ -21041,6 +21202,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
+ &#8226;   <a href="#numpy.lib.recfunctions">numpy.lib.recfunctions</a>
 
   </div>
 
@@ -21153,6 +21315,7 @@ imports:
  &#8226;   <a href="#collections.abc">collections.abc</a>
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core.fromnumeric">numpy.core.fromnumeric</a>
  &#8226;   <a href="#numpy.core.function_base">numpy.core.function_base</a>
@@ -21226,6 +21389,8 @@ imported by:
 imports:
     <a href="#functools">functools</a>
  &#8226;   <a href="#math">math</a>
+ &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core.linspace">numpy.core.linspace</a>
  &#8226;   <a href="#numpy.core.multiarray">numpy.core.multiarray</a>
@@ -21346,6 +21511,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#functools">functools</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core.array">numpy.core.array</a>
  &#8226;   <a href="#numpy.core.atleast_1d">numpy.core.atleast_1d</a>
@@ -21380,6 +21546,31 @@ imported by:
 imported by:
     <a href="#numpy.lib">numpy.lib</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="numpy.lib.recfunctions"></a>
+  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/lib/recfunctions.py" type="text/plain"><tt>numpy.lib.recfunctions</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#itertools">itertools</a>
+ &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
+ &#8226;   <a href="#numpy.lib">numpy.lib</a>
+ &#8226;   <a href="#numpy.lib._iotools">numpy.lib._iotools</a>
+ &#8226;   <a href="#numpy.ma">numpy.ma</a>
+ &#8226;   <a href="#numpy.ma.mrecords">numpy.ma.mrecords</a>
+ &#8226;   <a href="#numpy.ndarray">numpy.ndarray</a>
+ &#8226;   <a href="#numpy.recarray">numpy.recarray</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#numpy.lib">numpy.lib</a>
+ &#8226;   <a href="#numpy.testing.overrides">numpy.testing.overrides</a>
 
   </div>
 
@@ -21488,13 +21679,13 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#functools">functools</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core.getlimits">numpy.core.getlimits</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
  &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
  &#8226;   <a href="#numpy.lib">numpy.lib</a>
  &#8226;   <a href="#numpy.lib.ufunclike">numpy.lib.ufunclike</a>
- &#8226;   <a href="#warnings">warnings</a>
 
   </div>
   <div class="import">
@@ -21538,15 +21729,16 @@ imports:
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#io">io</a>
  &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._multiarray_umath">numpy.core._multiarray_umath</a>
  &#8226;   <a href="#numpy.core.asarray">numpy.core.asarray</a>
  &#8226;   <a href="#numpy.core.ndarray">numpy.core.ndarray</a>
  &#8226;   <a href="#numpy.core.numerictypes">numpy.core.numerictypes</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
  &#8226;   <a href="#numpy.core.ufunc">numpy.core.ufunc</a>
  &#8226;   <a href="#numpy.lib">numpy.lib</a>
  &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#platform">platform</a>
  &#8226;   <a href="#pprint">pprint</a>
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#re">re</a>
@@ -21598,6 +21790,7 @@ imported by:
  &#8226;   <a href="#numpy.polynomial.laguerre">numpy.polynomial.laguerre</a>
  &#8226;   <a href="#numpy.polynomial.legendre">numpy.polynomial.legendre</a>
  &#8226;   <a href="#numpy.polynomial.polynomial">numpy.polynomial.polynomial</a>
+ &#8226;   <a href="#utils.matrix_norm">utils.matrix_norm</a>
 
   </div>
 
@@ -21642,6 +21835,8 @@ imported by:
 imports:
     <a href="#functools">functools</a>
  &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy._typing">numpy._typing</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core.Inf">numpy.core.Inf</a>
  &#8226;   <a href="#numpy.core.add">numpy.core.add</a>
@@ -21677,7 +21872,7 @@ imports:
  &#8226;   <a href="#numpy.core.newaxis">numpy.core.newaxis</a>
  &#8226;   <a href="#numpy.core.object_">numpy.core.object_</a>
  &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
- &#8226;   <a href="#numpy.core.product">numpy.core.product</a>
+ &#8226;   <a href="#numpy.core.prod">numpy.core.prod</a>
  &#8226;   <a href="#numpy.core.reciprocal">numpy.core.reciprocal</a>
  &#8226;   <a href="#numpy.core.sign">numpy.core.sign</a>
  &#8226;   <a href="#numpy.core.single">numpy.core.single</a>
@@ -21690,6 +21885,7 @@ imports:
  &#8226;   <a href="#numpy.linalg">numpy.linalg</a>
  &#8226;   <a href="#numpy.linalg._umath_linalg">numpy.linalg._umath_linalg</a>
  &#8226;   <a href="#operator">operator</a>
+ &#8226;   <a href="#typing">typing</a>
  &#8226;   <a href="#warnings">warnings</a>
 
   </div>
@@ -21724,6 +21920,7 @@ imported by:
  &#8226;   <a href="#matplotlib.units">matplotlib.units</a>
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
+ &#8226;   <a href="#numpy.lib.recfunctions">numpy.lib.recfunctions</a>
  &#8226;   <a href="#numpy.ma">numpy.ma</a>
  &#8226;   <a href="#numpy.ma.core">numpy.ma.core</a>
  &#8226;   <a href="#numpy.ma.extras">numpy.ma.extras</a>
@@ -21818,6 +22015,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
+ &#8226;   <a href="#numpy.lib.recfunctions">numpy.lib.recfunctions</a>
 
   </div>
 
@@ -21851,8 +22049,8 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#ast">ast</a>
+ &#8226;   <a href="#numpy._utils">numpy._utils</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
- &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
  &#8226;   <a href="#numpy.linalg">numpy.linalg</a>
  &#8226;   <a href="#numpy.matrixlib">numpy.matrixlib</a>
  &#8226;   <a href="#sys">sys</a>
@@ -21876,6 +22074,7 @@ imported by:
     <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy._typing._array_like">numpy._typing._array_like</a>
  &#8226;   <a href="#numpy.ctypeslib">numpy.ctypeslib</a>
+ &#8226;   <a href="#numpy.lib.recfunctions">numpy.lib.recfunctions</a>
  &#8226;   <a href="#numpy.ma.core">numpy.ma.core</a>
  &#8226;   <a href="#numpy.ma.extras">numpy.ma.extras</a>
  &#8226;   <a href="#numpy.ma.mrecords">numpy.ma.mrecords</a>
@@ -22344,6 +22543,7 @@ imported by:
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
     <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.lib.recfunctions">numpy.lib.recfunctions</a>
  &#8226;   <a href="#numpy.ma.mrecords">numpy.ma.mrecords</a>
 
   </div>
@@ -22371,10 +22571,9 @@ imports:
  &#8226;   <a href="#numpy._pytesttester">numpy._pytesttester</a>
  &#8226;   <a href="#numpy.testing">numpy.testing</a>
  &#8226;   <a href="#numpy.testing._private">numpy.testing._private</a>
- &#8226;   <a href="#numpy.testing._private.decorators">numpy.testing._private.decorators</a>
  &#8226;   <a href="#numpy.testing._private.extbuild">numpy.testing._private.extbuild</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
+ &#8226;   <a href="#numpy.testing.overrides">numpy.testing.overrides</a>
  &#8226;   <a href="#unittest">unittest</a>
 
   </div>
@@ -22384,6 +22583,7 @@ imported by:
  &#8226;   <a href="#numpy._pytesttester">numpy._pytesttester</a>
  &#8226;   <a href="#numpy.testing">numpy.testing</a>
  &#8226;   <a href="#numpy.testing._private">numpy.testing._private</a>
+ &#8226;   <a href="#numpy.testing.overrides">numpy.testing.overrides</a>
 
   </div>
 
@@ -22395,43 +22595,14 @@ imported by:
 <span class="moduletype">Package</span>  <div class="import">
 imports:
     <a href="#numpy.testing">numpy.testing</a>
- &#8226;   <a href="#numpy.testing._private">numpy.testing._private</a>
- &#8226;   <a href="#numpy.testing._private.decorators">numpy.testing._private.decorators</a>
  &#8226;   <a href="#numpy.testing._private.extbuild">numpy.testing._private.extbuild</a>
 
   </div>
   <div class="import">
 imported by:
     <a href="#numpy.testing">numpy.testing</a>
- &#8226;   <a href="#numpy.testing._private">numpy.testing._private</a>
- &#8226;   <a href="#numpy.testing._private.decorators">numpy.testing._private.decorators</a>
  &#8226;   <a href="#numpy.testing._private.extbuild">numpy.testing._private.extbuild</a>
- &#8226;   <a href="#numpy.testing._private.noseclasses">numpy.testing._private.noseclasses</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
- &#8226;   <a href="#numpy.testing._private.parameterized">numpy.testing._private.parameterized</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="numpy.testing._private.decorators"></a>
-  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/testing/_private/decorators.py" type="text/plain"><tt>numpy.testing._private.decorators</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#collections.abc">collections.abc</a>
- &#8226;   <a href="#numpy.testing._private">numpy.testing._private</a>
- &#8226;   <a href="#numpy.testing._private.noseclasses">numpy.testing._private.noseclasses</a>
- &#8226;   <a href="#numpy.testing._private.parameterized">numpy.testing._private.parameterized</a>
- &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
- &#8226;   <a href="#warnings">warnings</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#numpy.testing">numpy.testing</a>
- &#8226;   <a href="#numpy.testing._private">numpy.testing._private</a>
 
   </div>
 
@@ -22454,80 +22625,6 @@ imports:
 imported by:
     <a href="#numpy.testing">numpy.testing</a>
  &#8226;   <a href="#numpy.testing._private">numpy.testing._private</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="numpy.testing._private.noseclasses"></a>
-  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/testing/_private/noseclasses.py" type="text/plain"><tt>numpy.testing._private.noseclasses</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#doctest">doctest</a>
- &#8226;   <a href="#inspect">inspect</a>
- &#8226;   <a href="#numpy">numpy</a>
- &#8226;   <a href="#numpy.core._multiarray_tests">numpy.core._multiarray_tests</a>
- &#8226;   <a href="#numpy.testing._private">numpy.testing._private</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
- &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
- &#8226;   <a href="#os">os</a>
- &#8226;   <a href="#sys">sys</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#numpy.testing._private.decorators">numpy.testing._private.decorators</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="numpy.testing._private.nosetester"></a>
-  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/testing/_private/nosetester.py" type="text/plain"><tt>numpy.testing._private.nosetester</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#doctest">doctest</a>
- &#8226;   <a href="#numpy">numpy</a>
- &#8226;   <a href="#numpy.distutils">numpy.distutils</a>
- &#8226;   <a href="#numpy.distutils.cpuinfo">numpy.distutils.cpuinfo</a>
- &#8226;   <a href="#numpy.testing._private">numpy.testing._private</a>
- &#8226;   <a href="#numpy.testing._private.noseclasses">numpy.testing._private.noseclasses</a>
- &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
- &#8226;   <a href="#os">os</a>
- &#8226;   <a href="#sys">sys</a>
- &#8226;   <a href="#warnings">warnings</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#numpy.testing">numpy.testing</a>
- &#8226;   <a href="#numpy.testing._private.noseclasses">numpy.testing._private.noseclasses</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="numpy.testing._private.parameterized"></a>
-  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/testing/_private/parameterized.py" type="text/plain"><tt>numpy.testing._private.parameterized</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#collections">collections</a>
- &#8226;   <a href="#functools">functools</a>
- &#8226;   <a href="#inspect">inspect</a>
- &#8226;   <a href="#numpy.testing._private">numpy.testing._private</a>
- &#8226;   <a href="#re">re</a>
- &#8226;   <a href="#types">types</a>
- &#8226;   <a href="#unittest">unittest</a>
- &#8226;   <a href="#warnings">warnings</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#numpy.testing._private.decorators">numpy.testing._private.decorators</a>
 
   </div>
 
@@ -22560,17 +22657,19 @@ imports:
  &#8226;   <a href="#numpy.core.fromnumeric">numpy.core.fromnumeric</a>
  &#8226;   <a href="#numpy.core.inf">numpy.core.inf</a>
  &#8226;   <a href="#numpy.core.intp">numpy.core.intp</a>
- &#8226;   <a href="#numpy.core.isfinite">numpy.core.isfinite</a>
- &#8226;   <a href="#numpy.core.isinf">numpy.core.isinf</a>
  &#8226;   <a href="#numpy.core.isnan">numpy.core.isnan</a>
  &#8226;   <a href="#numpy.core.isnat">numpy.core.isnat</a>
  &#8226;   <a href="#numpy.core.isscalar">numpy.core.isscalar</a>
+ &#8226;   <a href="#numpy.core.max">numpy.core.max</a>
  &#8226;   <a href="#numpy.core.ndarray">numpy.core.ndarray</a>
  &#8226;   <a href="#numpy.core.number">numpy.core.number</a>
  &#8226;   <a href="#numpy.core.numerictypes">numpy.core.numerictypes</a>
  &#8226;   <a href="#numpy.core.object_">numpy.core.object_</a>
  &#8226;   <a href="#numpy.core.result_type">numpy.core.result_type</a>
  &#8226;   <a href="#numpy.core.signbit">numpy.core.signbit</a>
+ &#8226;   <a href="#numpy.isfinite">numpy.isfinite</a>
+ &#8226;   <a href="#numpy.isinf">numpy.isinf</a>
+ &#8226;   <a href="#numpy.isnan">numpy.isnan</a>
  &#8226;   <a href="#numpy.lib">numpy.lib</a>
  &#8226;   <a href="#numpy.lib.imag">numpy.lib.imag</a>
  &#8226;   <a href="#numpy.lib.iscomplexobj">numpy.lib.iscomplexobj</a>
@@ -22584,7 +22683,9 @@ imports:
  &#8226;   <a href="#psutil">psutil</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#shutil">shutil</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#sysconfig">sysconfig</a>
  &#8226;   <a href="#tempfile">tempfile</a>
  &#8226;   <a href="#time">time</a>
  &#8226;   <a href="#traceback">traceback</a>
@@ -22597,9 +22698,28 @@ imports:
   <div class="import">
 imported by:
     <a href="#numpy.testing">numpy.testing</a>
- &#8226;   <a href="#numpy.testing._private.decorators">numpy.testing._private.decorators</a>
- &#8226;   <a href="#numpy.testing._private.noseclasses">numpy.testing._private.noseclasses</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="numpy.testing.overrides"></a>
+  <a target="code" href="///C:/Users/ivan_/AppData/Local/Programs/Python/Python311/Lib/site-packages/numpy/testing/overrides.py" type="text/plain"><tt>numpy.testing.overrides</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
+ &#8226;   <a href="#numpy.core.umath">numpy.core.umath</a>
+ &#8226;   <a href="#numpy.lib">numpy.lib</a>
+ &#8226;   <a href="#numpy.lib.recfunctions">numpy.lib.recfunctions</a>
+ &#8226;   <a href="#numpy.testing">numpy.testing</a>
+ &#8226;   <a href="#numpy.ufunc">numpy.ufunc</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#numpy.testing">numpy.testing</a>
 
   </div>
 
@@ -22644,6 +22764,7 @@ imported by:
 imported by:
     <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy._typing">numpy._typing</a>
+ &#8226;   <a href="#numpy.testing.overrides">numpy.testing.overrides</a>
 
   </div>
 
@@ -22715,6 +22836,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#__future__">__future__</a>
+ &#8226;   <a href="#_version_meson">_version_meson</a>
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy._version">numpy._version</a>
 
@@ -23018,14 +23140,11 @@ imported by:
  &#8226;   <a href="#numpy.core._add_newdocs_scalars">numpy.core._add_newdocs_scalars</a>
  &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
  &#8226;   <a href="#numpy.ctypeslib">numpy.ctypeslib</a>
- &#8226;   <a href="#numpy.distutils.cpuinfo">numpy.distutils.cpuinfo</a>
  &#8226;   <a href="#numpy.lib._datasource">numpy.lib._datasource</a>
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
  &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
  &#8226;   <a href="#numpy.polynomial._polybase">numpy.polynomial._polybase</a>
  &#8226;   <a href="#numpy.testing._private.extbuild">numpy.testing._private.extbuild</a>
- &#8226;   <a href="#numpy.testing._private.noseclasses">numpy.testing._private.noseclasses</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#optparse">optparse</a>
  &#8226;   <a href="#packaging._elffile">packaging._elffile</a>
@@ -24794,7 +24913,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#PySimpleGUI.PySimpleGUI">PySimpleGUI.PySimpleGUI</a>
- &#8226;   <a href="#numpy.distutils.cpuinfo">numpy.distutils.cpuinfo</a>
+ &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#packaging.markers">packaging.markers</a>
  &#8226;   <a href="#packaging.tags">packaging.tags</a>
@@ -25668,14 +25787,12 @@ imported by:
  &#8226;   <a href="#mpmath.ctx_mp">mpmath.ctx_mp</a>
  &#8226;   <a href="#numpy._typing._add_docstring">numpy._typing._add_docstring</a>
  &#8226;   <a href="#numpy.core._internal">numpy.core._internal</a>
- &#8226;   <a href="#numpy.distutils.cpuinfo">numpy.distutils.cpuinfo</a>
  &#8226;   <a href="#numpy.lib._version">numpy.lib._version</a>
  &#8226;   <a href="#numpy.lib.function_base">numpy.lib.function_base</a>
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
  &#8226;   <a href="#numpy.lib.polynomial">numpy.lib.polynomial</a>
  &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
  &#8226;   <a href="#numpy.ma.core">numpy.ma.core</a>
- &#8226;   <a href="#numpy.testing._private.parameterized">numpy.testing._private.parameterized</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#packaging._manylinux">packaging._manylinux</a>
  &#8226;   <a href="#packaging._musllinux">packaging._musllinux</a>
@@ -26561,7 +26678,7 @@ imported by:
  &#8226;   <a href="#matplotlib.font_manager">matplotlib.font_manager</a>
  &#8226;   <a href="#matplotlib.texmanager">matplotlib.texmanager</a>
  &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
- &#8226;   <a href="#numpy.distutils.cpuinfo">numpy.distutils.cpuinfo</a>
+ &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#packaging._musllinux">packaging._musllinux</a>
  &#8226;   <a href="#packaging.tags">packaging.tags</a>
@@ -26653,9 +26770,13 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#ecm">ecm</a>
+    <a href="#appr_invertible_matrix">appr_invertible_matrix</a>
+ &#8226;   <a href="#appr_k_primitive">appr_k_primitive</a>
+ &#8226;   <a href="#appr_mueller_matrix">appr_mueller_matrix</a>
+ &#8226;   <a href="#ecm">ecm</a>
+ &#8226;   <a href="#index.py">index.py</a>
  &#8226;   <a href="#k_irreducible">k_irreducible</a>
- &#8226;   <a href="#k_strongly_irreducible">k_strongly_irreducible</a>
+ &#8226;   <a href="#k_primitive">k_primitive</a>
  &#8226;   <a href="#sympy.abc">sympy.abc</a>
  &#8226;   <a href="#sympy.algebras">sympy.algebras</a>
  &#8226;   <a href="#sympy.assumptions">sympy.assumptions</a>
@@ -26709,9 +26830,9 @@ imported by:
  &#8226;   <a href="#sympy.utilities.iterables">sympy.utilities.iterables</a>
  &#8226;   <a href="#sympy.utilities.misc">sympy.utilities.misc</a>
  &#8226;   <a href="#sympy.vector">sympy.vector</a>
- &#8226;   <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
+ &#8226;   <a href="#utils.k_primitive">utils.k_primitive</a>
  &#8226;   <a href="#utils.matrix_norm">utils.matrix_norm</a>
- &#8226;   <a href="#utils.mueller_matrix_approximation">utils.mueller_matrix_approximation</a>
+ &#8226;   <a href="#utils.request_matrix">utils.request_matrix</a>
  &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
 
   </div>
@@ -46233,8 +46354,8 @@ imported by:
  &#8226;   <a href="#matplotlib.font_manager">matplotlib.font_manager</a>
  &#8226;   <a href="#matplotlib.pyplot">matplotlib.pyplot</a>
  &#8226;   <a href="#matplotlib.style.core">matplotlib.style.core</a>
+ &#8226;   <a href="#matplotlib.tri._triangulation">matplotlib.tri._triangulation</a>
  &#8226;   <a href="#mimetypes">mimetypes</a>
- &#8226;   <a href="#mpl_toolkits">mpl_toolkits</a>
  &#8226;   <a href="#mpmath">mpmath</a>
  &#8226;   <a href="#mpmath.libmp.backend">mpmath.libmp.backend</a>
  &#8226;   <a href="#mpmath.libmp.gammazeta">mpmath.libmp.gammazeta</a>
@@ -46262,23 +46383,18 @@ imported by:
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#numpy.__config__">numpy.__config__</a>
  &#8226;   <a href="#numpy._pytesttester">numpy._pytesttester</a>
- &#8226;   <a href="#numpy._typing._array_like">numpy._typing._array_like</a>
- &#8226;   <a href="#numpy._typing._generic_alias">numpy._typing._generic_alias</a>
- &#8226;   <a href="#numpy.array_api._typing">numpy.array_api._typing</a>
  &#8226;   <a href="#numpy.compat.py3k">numpy.compat.py3k</a>
  &#8226;   <a href="#numpy.core">numpy.core</a>
  &#8226;   <a href="#numpy.core._add_newdocs_scalars">numpy.core._add_newdocs_scalars</a>
  &#8226;   <a href="#numpy.core._internal">numpy.core._internal</a>
  &#8226;   <a href="#numpy.core.arrayprint">numpy.core.arrayprint</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
- &#8226;   <a href="#numpy.distutils.cpuinfo">numpy.distutils.cpuinfo</a>
+ &#8226;   <a href="#numpy.ctypeslib">numpy.ctypeslib</a>
  &#8226;   <a href="#numpy.lib.function_base">numpy.lib.function_base</a>
  &#8226;   <a href="#numpy.lib.index_tricks">numpy.lib.index_tricks</a>
  &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
  &#8226;   <a href="#numpy.matrixlib.defmatrix">numpy.matrixlib.defmatrix</a>
  &#8226;   <a href="#numpy.testing._private.extbuild">numpy.testing._private.extbuild</a>
- &#8226;   <a href="#numpy.testing._private.noseclasses">numpy.testing._private.noseclasses</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#optparse">optparse</a>
  &#8226;   <a href="#os">os</a>
@@ -46405,7 +46521,9 @@ imports:
   <div class="import">
 imported by:
     <a href="#_aix_support">_aix_support</a>
+ &#8226;   <a href="#numpy.ctypeslib">numpy.ctypeslib</a>
  &#8226;   <a href="#numpy.testing._private.extbuild">numpy.testing._private.extbuild</a>
+ &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#packaging._musllinux">packaging._musllinux</a>
  &#8226;   <a href="#packaging.tags">packaging.tags</a>
  &#8226;   <a href="#pkg_resources">pkg_resources</a>
@@ -47166,14 +47284,11 @@ imported by:
  &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
  &#8226;   <a href="#multiprocessing.shared_memory">multiprocessing.shared_memory</a>
  &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
- &#8226;   <a href="#numpy._typing._generic_alias">numpy._typing._generic_alias</a>
+ &#8226;   <a href="#numpy._utils._inspect">numpy._utils._inspect</a>
  &#8226;   <a href="#numpy.array_api._array_object">numpy.array_api._array_object</a>
- &#8226;   <a href="#numpy.compat._inspect">numpy.compat._inspect</a>
  &#8226;   <a href="#numpy.core.fromnumeric">numpy.core.fromnumeric</a>
  &#8226;   <a href="#numpy.core.function_base">numpy.core.function_base</a>
- &#8226;   <a href="#numpy.distutils.cpuinfo">numpy.distutils.cpuinfo</a>
  &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
- &#8226;   <a href="#numpy.testing._private.parameterized">numpy.testing._private.parameterized</a>
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#pkg_resources">pkg_resources</a>
  &#8226;   <a href="#pkg_resources._vendor.importlib_resources._common">pkg_resources._vendor.importlib_resources._common</a>
@@ -47245,7 +47360,6 @@ imported by:
  &#8226;   <a href="#numpy._typing._array_like">numpy._typing._array_like</a>
  &#8226;   <a href="#numpy._typing._char_codes">numpy._typing._char_codes</a>
  &#8226;   <a href="#numpy._typing._dtype_like">numpy._typing._dtype_like</a>
- &#8226;   <a href="#numpy._typing._generic_alias">numpy._typing._generic_alias</a>
  &#8226;   <a href="#numpy._typing._nbit">numpy._typing._nbit</a>
  &#8226;   <a href="#numpy._typing._nested_sequence">numpy._typing._nested_sequence</a>
  &#8226;   <a href="#numpy._typing._scalars">numpy._typing._scalars</a>
@@ -47260,6 +47374,7 @@ imported by:
  &#8226;   <a href="#numpy.array_api._typing">numpy.array_api._typing</a>
  &#8226;   <a href="#numpy.array_api._utility_functions">numpy.array_api._utility_functions</a>
  &#8226;   <a href="#numpy.array_api.linalg">numpy.array_api.linalg</a>
+ &#8226;   <a href="#numpy.linalg.linalg">numpy.linalg.linalg</a>
  &#8226;   <a href="#packaging._elffile">packaging._elffile</a>
  &#8226;   <a href="#packaging._manylinux">packaging._manylinux</a>
  &#8226;   <a href="#packaging._musllinux">packaging._musllinux</a>
@@ -47428,7 +47543,6 @@ imports:
 imported by:
     <a href="#doctest">doctest</a>
  &#8226;   <a href="#numpy.testing">numpy.testing</a>
- &#8226;   <a href="#numpy.testing._private.parameterized">numpy.testing._private.parameterized</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#unittest">unittest</a>
  &#8226;   <a href="#unittest._log">unittest._log</a>
@@ -47860,30 +47974,10 @@ imported by:
   <a target="code" href="-" type="text/plain"><tt>utils</tt></a>
 <span class="moduletype">NamespacePackage</span>  <div class="import">
 imported by:
-    <a href="#utils.ask_for_matrix">utils.ask_for_matrix</a>
- &#8226;   <a href="#utils.format_print_matrix">utils.format_print_matrix</a>
+    <a href="#utils.format_print_matrix">utils.format_print_matrix</a>
+ &#8226;   <a href="#utils.k_primitive">utils.k_primitive</a>
  &#8226;   <a href="#utils.matrix_norm">utils.matrix_norm</a>
- &#8226;   <a href="#utils.mueller_matrix_approximation">utils.mueller_matrix_approximation</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="utils.ask_for_matrix"></a>
-  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/utils/ask_for_matrix.py" type="text/plain"><tt>utils.ask_for_matrix</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#PySimpleGUI">PySimpleGUI</a>
- &#8226;   <a href="#numpy">numpy</a>
- &#8226;   <a href="#sympy">sympy</a>
- &#8226;   <a href="#utils">utils</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#ecm">ecm</a>
- &#8226;   <a href="#index.py">index.py</a>
+ &#8226;   <a href="#utils.request_matrix">utils.request_matrix</a>
 
   </div>
 
@@ -47901,7 +47995,24 @@ imports:
   <div class="import">
 imported by:
     <a href="#index.py">index.py</a>
- &#8226;   <a href="#k_strongly_irreducible">k_strongly_irreducible</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="utils.k_primitive"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/utils/k_primitive.py" type="text/plain"><tt>utils.k_primitive</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#sympy">sympy</a>
+ &#8226;   <a href="#utils">utils</a>
+ &#8226;   <a href="#utils.request_matrix">utils.request_matrix</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#appr_k_primitive">appr_k_primitive</a>
 
   </div>
 
@@ -47912,7 +48023,9 @@ imported by:
   <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/utils/matrix_norm.py" type="text/plain"><tt>utils.matrix_norm</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#sympy">sympy</a>
+    <a href="#numpy">numpy</a>
+ &#8226;   <a href="#numpy.linalg">numpy.linalg</a>
+ &#8226;   <a href="#sympy">sympy</a>
  &#8226;   <a href="#utils">utils</a>
 
   </div>
@@ -47925,18 +48038,21 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="utils.mueller_matrix_approximation"></a>
-  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/utils/mueller_matrix_approximation.py" type="text/plain"><tt>utils.mueller_matrix_approximation</tt></a>
+  <a name="utils.request_matrix"></a>
+  <a target="code" href="///C:/Users/ivan_/PycharmProjects/rvprogramaspython/utils/request_matrix.py" type="text/plain"><tt>utils.request_matrix</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#matrix_norm">matrix_norm</a>
+    <a href="#PySimpleGUI">PySimpleGUI</a>
+ &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#sympy">sympy</a>
  &#8226;   <a href="#utils">utils</a>
 
   </div>
   <div class="import">
 imported by:
-    <a href="#mueller_matrix_approximation">mueller_matrix_approximation</a>
+    <a href="#ecm">ecm</a>
+ &#8226;   <a href="#index.py">index.py</a>
+ &#8226;   <a href="#utils.k_primitive">utils.k_primitive</a>
 
   </div>
 
@@ -47981,11 +48097,14 @@ imports:
  &#8226;   <a href="#matplotlib.pyplot">matplotlib.pyplot</a>
  &#8226;   <a href="#numpy">numpy</a>
  &#8226;   <a href="#sympy">sympy</a>
+ &#8226;   <a href="#warnings">warnings</a>
 
   </div>
   <div class="import">
 imported by:
-    <a href="#ecm">ecm</a>
+    <a href="#appr_invertible_mueller_matrix">appr_invertible_mueller_matrix</a>
+ &#8226;   <a href="#appr_k_primitive">appr_k_primitive</a>
+ &#8226;   <a href="#appr_mueller_matrix">appr_mueller_matrix</a>
  &#8226;   <a href="#index.py">index.py</a>
 
   </div>
@@ -48091,11 +48210,10 @@ imported by:
  &#8226;   <a href="#numpy.core.function_base">numpy.core.function_base</a>
  &#8226;   <a href="#numpy.core.getlimits">numpy.core.getlimits</a>
  &#8226;   <a href="#numpy.core.numeric">numpy.core.numeric</a>
+ &#8226;   <a href="#numpy.core.numerictypes">numpy.core.numerictypes</a>
  &#8226;   <a href="#numpy.core.records">numpy.core.records</a>
  &#8226;   <a href="#numpy.core.shape_base">numpy.core.shape_base</a>
- &#8226;   <a href="#numpy.ctypeslib">numpy.ctypeslib</a>
- &#8226;   <a href="#numpy.distutils">numpy.distutils</a>
- &#8226;   <a href="#numpy.distutils.cpuinfo">numpy.distutils.cpuinfo</a>
+ &#8226;   <a href="#numpy.lib">numpy.lib</a>
  &#8226;   <a href="#numpy.lib.format">numpy.lib.format</a>
  &#8226;   <a href="#numpy.lib.function_base">numpy.lib.function_base</a>
  &#8226;   <a href="#numpy.lib.histograms">numpy.lib.histograms</a>
@@ -48103,7 +48221,6 @@ imported by:
  &#8226;   <a href="#numpy.lib.nanfunctions">numpy.lib.nanfunctions</a>
  &#8226;   <a href="#numpy.lib.npyio">numpy.lib.npyio</a>
  &#8226;   <a href="#numpy.lib.polynomial">numpy.lib.polynomial</a>
- &#8226;   <a href="#numpy.lib.type_check">numpy.lib.type_check</a>
  &#8226;   <a href="#numpy.lib.ufunclike">numpy.lib.ufunclike</a>
  &#8226;   <a href="#numpy.lib.utils">numpy.lib.utils</a>
  &#8226;   <a href="#numpy.linalg.linalg">numpy.linalg.linalg</a>
@@ -48112,9 +48229,6 @@ imported by:
  &#8226;   <a href="#numpy.ma.mrecords">numpy.ma.mrecords</a>
  &#8226;   <a href="#numpy.matrixlib.defmatrix">numpy.matrixlib.defmatrix</a>
  &#8226;   <a href="#numpy.polynomial.polyutils">numpy.polynomial.polyutils</a>
- &#8226;   <a href="#numpy.testing._private.decorators">numpy.testing._private.decorators</a>
- &#8226;   <a href="#numpy.testing._private.nosetester">numpy.testing._private.nosetester</a>
- &#8226;   <a href="#numpy.testing._private.parameterized">numpy.testing._private.parameterized</a>
  &#8226;   <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#packaging._manylinux">packaging._manylinux</a>
@@ -48167,6 +48281,7 @@ imported by:
  &#8226;   <a href="#unittest.runner">unittest.runner</a>
  &#8226;   <a href="#urllib.parse">urllib.parse</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
+ &#8226;   <a href="#van_der_mee_theorem">van_der_mee_theorem</a>
  &#8226;   <a href="#webbrowser">webbrowser</a>
  &#8226;   <a href="#zipfile">zipfile</a>
 
@@ -48315,7 +48430,6 @@ imported by:
  &#8226;   <a href="#matplotlib">matplotlib</a>
  &#8226;   <a href="#matplotlib.font_manager">matplotlib.font_manager</a>
  &#8226;   <a href="#mimetypes">mimetypes</a>
- &#8226;   <a href="#numpy.distutils.cpuinfo">numpy.distutils.cpuinfo</a>
  &#8226;   <a href="#pkg_resources._vendor.appdirs">pkg_resources._vendor.appdirs</a>
  &#8226;   <a href="#platform">platform</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>

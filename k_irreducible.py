@@ -1,4 +1,3 @@
-
 from sympy import *
 from sympy import Abs
 import numpy as np
@@ -58,16 +57,16 @@ def k_irreducible(m):
         print(f"The spectral radius, {ro_m}, is an eigenvalue of M.")
         ind_ro_m = eigenvalues_without_error.index(ro_m)
     else:
-        print(f"The spectral radius, {ro_m}, is NOT an eigenvalue of M.")
-        print(f"Therefore, the matrix M is not K-irreducible.")
+        print(f"The spectral radius, {ro_m}, is not an eigenvalue of M.")
+        print(f"Therefore, the matrix M is NOT K-irreducible.")
         return
 
-    print("------------------------------------------------------------------------------------")
     # We need to know if the spectral radius is a simple eigenvalue. That is, we need to know if the algebraic
     # multiplicity of the spectral radius is 1.
     mul_alg_ro_m = mult_alg[ind_ro_m]
     if mul_alg_ro_m != 1:
-        print(f"The spectral radius, {ro_m}, has algebraic multiplicity {mul_alg_ro_m}. Then, is not a simple eigenvalue.")
+        print(f"The spectral radius, {ro_m}, has algebraic multiplicity {mul_alg_ro_m}. "
+              f"Then, is not a simple eigenvalue.")
         print(f"Therefore the matrix is NOT K-irreducible.")
         return
     else:
@@ -85,7 +84,7 @@ def k_irreducible(m):
 
     for element in index_1:
         if mult_alg[element] != 1:
-            print(f"There is another eigenvalue, ({eigenvalues_without_error[element]}), with the same norm as {ro_m}")
+            print(f"There is another eigenvalue, {eigenvalues_without_error[element]}, with norm {ro_m}")
             print(f"and algebraic multiplicity {mult_alg[element]}. Then, is not a simple eigenvalue.")
             print("Therefore, the matrix is NOT K-irreducible.")
             return
@@ -93,7 +92,6 @@ def k_irreducible(m):
             continue
     print(f"All eigenvalues with norm {ro_m} are simples.")
 
-    print("------------------------------------------------------------------------------------")
     # Remains to check if the only eigenvector v (or -v) associated with the spectral radius is in the light cone.
     V = eigenvectors[ind_ro_m][0][0]
     U = Matrix([[re(N((V[0, 0]), 10))], [re(N((V[1, 0]), 10))], [re(N((V[2, 0]), 10))], [re(N((V[3, 0]), 10))]])
@@ -101,11 +99,15 @@ def k_irreducible(m):
     if U[0, 0] < 0:
         W = (-1) * U
         if ((W[3, 0]) ** 2) + ((W[2, 0]) ** 2) + ((W[1, 0]) ** 2) <= ((W[0, 0]) ** 2):
-            print('The eigenvector corresponding to the spectral radius is in the light cone, therefore M is K-irreducible.')
+            print(f"The eigenvector corresponding to the spectral radius is in the light cone, "
+                  f"therefore M is K-irreducible.")
         else:
-            print("The eigenvector corresponding to the spectral radius is NOT in the light cone, therefore M is NOT K-irreducible. ")
+            print(f"The eigenvector corresponding to the spectral radius is NOT in the light cone, "
+                  f"therefore M is NOT K-irreducible. ")
     else:
         if ((U[3, 0]) ** 2) + ((U[2, 0]) ** 2) + ((U[1, 0]) ** 2) <= ((U[0, 0]) ** 2):
-            print('The eigenvector corresponding to the spectral radius is in the light light cone, therefore M is K-irreducible.')
+            print(f"The eigenvector corresponding to the spectral radius is in the light light cone, "
+                  f"therefore M is K-irreducible.")
         else:
-            print("The eigenvector corresponding to the spectral radius is NOT in the light cone, therefore M is NOT K-irreducible. ")
+            print(f"The eigenvector corresponding to the spectral radius is NOT in the light cone, "
+                  f"therefore M is NOT K-irreducible. ")

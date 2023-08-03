@@ -3,3 +3,4 @@ sympy==1.12
 matplotlib==3.7.1
 PySimpleGUI==4.60.5
 pyinstaller==5.12.0
+

@@ -1,25 +1,21 @@
 from sympy import *
 import numpy as np
 from numpy.linalg import eig
-from utils.ask_for_matrix import ask_for_matrix_interface
-from mueller_matrix_approximation import mueller_approximation
-from van_der_mee_theorem import van_der_mee_theorem
+from utils.request_matrix import request_matrix_interface
+from appr_invertible_mueller_matrix import appr_invert_mueller_matrix
+from appr_invertible_matrix import make_invertible
+np.set_printoptions(precision=10, suppress=True, linewidth=2000)
 
 
 def ecm(m):
-    aw_1 = ask_for_matrix_interface("aw")
-    if aw_1.det() != 0:
-        aw = aw_1
-        print('The matrix aw is: \n', np.array(aw).astype(np.float64))
-        print("------------------------------------------------------------------------------------")
-    else:
-        aw = mueller_approximation(aw_1)
-        print('The input matrix aw is not invertible, so the new aw is: \n', np.array(aw).astype(np.float64))
-    amw = ask_for_matrix_interface("amw")
-    print('The matrix amw is: \n', np.array(amw).astype(np.float64))
+    aw, det_main_matrix = make_invertible("aw", request_matrix_interface("aw"))
+    print(f"Then, the matrix aw is: \n{np.array(aw).astype(np.float64)}")
     print("------------------------------------------------------------------------------------")
 
-    # We generate the canonical basis E_i, 1<=i<=16, of M_{4}(R) (4x4 matrices on real numbers)
+    amw = request_matrix_interface("amw")
+    print('The matrix amw is: \n', np.array(amw).astype(np.float64))
+
+    # We generate the canonical basis E_i, 1<=i<=4 of M_{4}(R) (4x4 matrices on real numbers)
     canonical_base = []
     for i in range(4):
         for j in range(4):
@@ -54,40 +50,65 @@ def ecm(m):
 
     # matrix_m_np is the matrix H in numpy format.
     matrix_h_np = np.array(matrix_h).astype(np.float64)
-    print('The matrix form of the function H in canonical basis is: \n', np.around(matrix_h_np,decimals=5))
+    print(f"The matrix form of the function H in canonical basis is: \n{np.around(matrix_h_np, decimals=5)}")
     print("------------------------------------------------------------------------------------")
 
     # null_space_h is the nullspace of H.
     null_space_h = matrix_h.nullspace()
 
-    # First consider the case when the null space of H is trivial.
+    # First consider the case when the null space of H is not trivial.
+    # In this case we search for an invertible matrix in the null space of H.
+    # Otherwise, we take any matrix in the nullspace of H.
+    # Let W such a matrix, then we have two cases:
+    # Case 1: If the matrix W is invertible, then we do nothing to W.
+    # Case 2: If the matrix W is not invertible, then we force W to be invertible using make_invertible(W).
+    # Note: The function make_invertible is in the file appr_mueller_matrix.
     if null_space_h:
         print('The null space of H is not trivial')
         j = 0
         while j <= (len(null_space_h) - 1) and Abs(
                 round(Matrix(np.array(null_space_h[j].transpose()).astype(np.float64).reshape((4, 4))).det(),
-                      10)) == 0:
+                      15)) == 0:
             j += 1
         else:
             if j == len(null_space_h):
                 a = Matrix(np.array(null_space_h[0].transpose()).astype(
                     np.float64).reshape((4, 4)))
-                print('There are no invertible matrices in the nullspace of H, so we select the matrix:\nA=',
-                      np.array(a).astype(np.float64))
+                print(f"No invertible matrices found in the nullspace of H, so we select the matrix: W=\n"
+                      f"{np.array(a).astype(np.float64)}")
                 print("------------------------------------------------------------------------------------")
             else:
                 a = Matrix(np.array(null_space_h[j].transpose()).astype(
                     np.float64).reshape((4, 4)))
-                print('We find an invertible matrix in the null space of H:\nA=', np.array(a).astype(np.float64))
+                print(f"An invertible matrix was found in the null space of H: W=\n{np.array(a).astype(np.float64)}")
+                print("------------------------------------------------------------------------------------")
 
-        w = mueller_approximation(Matrix(a))
-        print("An approximation W of A by an invertible Mueller matrix is given by: \n", np.array(w).astype(np.float64))
+        w, det_main_matrix = make_invertible("W", Matrix(a))
+        print(f"Then, the matrix W is: \n{np.array(w).astype(np.float64)}")
         print("------------------------------------------------------------------------------------")
 
     else:
+        # Now we have that the null space of H is non-trivial. Then we calculate the eigenvalues of H.
+        # Then there are two cases:
+
+        # Case 1. There are no real eigenvalues of H. In this case we use the matrix H^{T}*H (the product of H transpose
+        # and H). Then :
+        # 1.1. We calculate the eigenvalues of H^{T}*H (all are positive values).
+        # 1.2. We take the minimum eigenvalue of H^{T}*H
+        # 1.3. We find an eigenvector W associated to the minimum eigenvalue of H^{T}*H.
+        # 1.4. We make W invertible using the function make_invertible(W).
+
+        # Case 2. There are real eigenvalues of H. Then:
+        # 1.1. We calculate the norms of the real eigenvalues.
+        # 1.2. We take the minimum of the norms of the real eigenvalues.
+        # 1.3. We find an eigenvector W associated to the eigenvalue at which the minimum norm is reached.
+        # 1.4. We make W invertible using the function make_invertible(W).
+
         print('The null space of H is trivial')
+        # First we compute the eigenvalues and eigenvectors of H.
+
         # The 1d numpy array eigenvalues_h and the 2d numpy array eigenvectors_h
-        # are the eigenvalues and eigenvectors of H computed numerically.
+        # are the eigenvalues and eigenvectors respectively of H computed numerically.
         eigenvalues_h, eigenvectors_h = eig(matrix_h_np)
 
         # Numerical approximations of eigenvalues generate small imaginary parts that we need to filter.
@@ -124,22 +145,23 @@ def ecm(m):
         print(f"The complex eigenvalues of H are: {complex_eigenvalues}.")
         print("------------------------------------------------------------------------------------")
         # Case 1:
-        # There are no real eigenvalues.
+        # There are no real eigenvalues of H.
         if not real_eigenvalues:
             # H^{T}*H is the product of the transpose of H and H.
-            print('There are no real eigenvalues, so the approximation will be done in the matrix H^T*H.')
+            print('There are no real eigenvalues, therefore the approximation will be done in the matrix H^T*H.')
             ht_h = np.matmul(matrix_h_np.transpose(), matrix_h_np)
 
-            # eigenvalues_ht_h, eigenvectors_ht_h are the eigenvectors and eigenvalues of HT^{T}H computed numerically.
+            # eigenvalues_ht_h, eigenvectors_ht_h are the eigenvalues and eigenvectors of HT^{T}H computed numerically.
             eigenvalues_ht_h, eigenvectors_ht_h = eig(ht_h)
 
             # The eigenvectors_ht_h_transpose matrix has the eigenvectors of H arranged in the columns.
-            # Then, for convenience, we calculate the transposed matrix of eigenvectors_ht_h_transpose
+            # Then, for convenience we calculate the transposed matrix of eigenvectors_ht_h_transpose
             # to have the eigenvalues of H ordered in the rows.
             eigenvectors_ht_h_transpose = eigenvectors_ht_h.transpose()
 
             print(f"The matrix H^{{T}}*H is: \n{ht_h}")
             print("------------------------------------------------------------------------------------")
+
             # All eigenvalues of ht_h are non-negative, but they come with a tiny imaginary part given by the numerical
             # approximation, so we take only the real part of each approximate eigenvalue.
             eigenvalues_ht_h_no_error = []
@@ -154,16 +176,16 @@ def ecm(m):
             a = np.array(
                 eigenvectors_ht_h_transpose[eigenvalues_ht_h_no_error.index(min(eigenvalues_ht_h_no_error))]).astype(
                 np.float64).reshape((4, 4))
-            print(f"The eigenvector A associated to the eigenvalue {min(eigenvalues_ht_h_no_error)} is: \n {a}")
+            print(f"An eigenvector W associated to the eigenvalue {min(eigenvalues_ht_h_no_error)} is: \n{a}")
             print("------------------------------------------------------------------------------------")
-            w = mueller_approximation(Matrix(a))
-            print('An approximation W of A by an invertible Mueller matrix is given by: \n',
-                  np.array(w).astype(np.float64))
+
+            w, det_main_matrix = make_invertible("W", Matrix(a))
+            print(f"Then, the matrix W is: \n{np.array(w).astype(np.float64)}")
             print("------------------------------------------------------------------------------------")
 
         else:
             # Case 2:
-            # There are real eigenvalues of H^{T}*H.
+            # There are real eigenvalues of H.
             # We need to find the real eigenvalue with the smallest norm.
             abs_real_eigenvalues = []
             for i in range(len(real_eigenvalues)):
@@ -172,25 +194,37 @@ def ecm(m):
             print(f"The norms of the real eigenvalues of H are: {abs_real_eigenvalues}")
             print(f"The minimum of the norms of the eigenvalues is: {min(abs_real_eigenvalues)}")
             print("------------------------------------------------------------------------------------")
+
             ind_min_real_eigenvalues = eigenvalues_h_without_error.index(
                 real_eigenvalues[abs_real_eigenvalues.index(min(abs_real_eigenvalues))])
-            print(f"An eigenvalue associated with the minimum norm is: \n{eigenvalues_h_without_error[ind_min_real_eigenvalues]}")
+            print(f"An eigenvalue associated with the minimum norm is:"
+                  f"\n{eigenvalues_h_without_error[ind_min_real_eigenvalues]}")
 
+            # The matrix called "a" in the code is the matrix A associated to the minimum norm.
             a = np.array(eigenvectors_h_transpose[ind_min_real_eigenvalues]).reshape((4, 4))
-            print(
-                f"The eigenvector A associated to the eigenvalue {eigenvalues_h_without_error[ind_min_real_eigenvalues]}is:\n{a}")
+            print(f"An eigenvector W associated to the eigenvalue "
+                  f"{eigenvalues_h_without_error[ind_min_real_eigenvalues]} is:\n{a}")
             print("------------------------------------------------------------------------------------")
-            w = mueller_approximation(Matrix(a))
-            print("An approximation W of A by an invertible Mueller matrix is given by: \n",
-                  np.array(w).astype(np.float64))
+            w, det_main_matrix = make_invertible("W", Matrix(a))
+            print(f"Then, the matrix W is: \n{np.array(w).astype(np.float64)}")
             print("------------------------------------------------------------------------------------")
-    new_m = w*aw_inv*amw*w.inv()
 
-    print(f"The new matrix M is: \n{np.array(new_m).astype(np.float64)}")
-    print(
-        f"An approximation of the new M by an invertible Mueller matrix is: \n{np.array(mueller_approximation(new_m)).astype(np.float64)}")
-    z_masked, ax, qm, plt, mi, minimum_qm =van_der_mee_theorem(mueller_approximation(new_m))
-    print(minimum_qm)
-    print(mueller_approximation(new_m).det())
+    # The last step is to calculate a new M:
+    # 1.1. Let new_M=W*(aw^{-1})*amw*(W^{-1})
+    # 1.2. We approximate new_M by an invertible Mueller matrix using the function
+    # new_M(mu-inv)=appr_invert_mueller_matrix(M_{0})
+    # Then, new_M(mu-inv) is our final matrix, an invertible Mueller matrix.
+
+    new_m = w*aw_inv*amw*(w.inv())
+    print()
+    print(f"The new matrix M, denoted by New_M, is the matrix defined by new_M=W*(aw^{-1})*amw*(W^{-1})="
+          f"\n{np.array(new_m).astype(np.float64)}")
+    print("------------------------------------------------------------------------------------")
+    print(f"Following the notation of the comments in the appr_invertible_mueller_matrix and "
+          f"appr_by_mueller_matrix files, we call New_M(mu-inv) to the approximation ")
+    print(f"of New_M by an invertible Mueller matrix. This is the final matrix obtained by the ECM.")
     print("------------------------------------------------------------------------------------")
 
+    m_appr = appr_invert_mueller_matrix("New_M", Matrix(np.around(np.array(new_m).astype(np.float64), decimals=8)))
+
+    return m_appr

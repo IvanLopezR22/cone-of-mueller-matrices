@@ -1,3 +1,4 @@
+
 # Cone of Mueller Matrices 
 
 
@@ -18,7 +19,7 @@
   <a name="General instructions for the code in the article--installation"></a><a name="1.2"></a>
   - [1.2] **Installation**:To install the libraries in the version of the code in the <br />
   article, download the file requirements and move it on your project. Then run the following command: pip install -r requirements.txt
-.
+$$x$$
 
 
 ## Program execution
@@ -34,6 +35,7 @@
 
   <a name="Documentation-Matrix norm"></a><a name="3.1"></a>
   - [3.1] **Matrix norm**: This program is based on the Rayleigh-Ritz Theorem.
-  - Which assures us that the norm of the matrix M is the square root of the largest eigenvalue of the matrix M^{T}*M.
+  - Which assures us that the norm of the matrix M is the square root of the largest eigenvalue of the matrix $M^{T}*M$.
   - 
-  - The documentation is written in the form of comments in each of the files or in the article code.
+  - The documentation is written in the form of comments in each of the files or in the article code.;
+$$M_{4}(\mathbb{R})$$

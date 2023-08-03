@@ -1,24 +1,20 @@
 from sympy import *
 from sympy import Abs
+import numpy as np
+from numpy.linalg import eig
 
 
 def norm_of_matrix(main_matrix):
-    # To calculate the norm of a matrix M we use a corollary of the Rayleigh-Ritz Theorem. Which assures us that
-    # the norm of the matrix M is the square root of the largest eigenvalue of the matrix M^{T}*M.
+    # To calculate the norm of a matrix M we use the Rayleigh-Ritz Theorem. Which assures us that
+    # the operator norm or 2-norm of the matrix M is the square root of the largest eigenvalue of the matrix MT^{T}*M.
 
     mult_transpose_main = main_matrix.T * main_matrix
+    eigenvalues_h, eigenvectors_h = eig(np.array(mult_transpose_main).astype(np.float64))
 
-    # Now we calculate the exact eigenvalues of M^{T}*M, which are non-negative.
-    eigenvectors_mtm = mult_transpose_main.eigenvects()
-    eigenvalues_mtm = []
-    for element in eigenvectors_mtm:
-        eigenvalues_mtm.append((element[0]))
-
-    # Finally, we generate a numerical approximation of the exact eigenvalues and then select the largest.
-    # We do this because the numerical approximations generate little imaginary parts that we need to filter out.
+    # Now we calculate numerically the eigenvalues of M^{T}*M using numpy, which are non-negative.
     norm_eigenvalues_mtm = []
-    for i in range(len(eigenvalues_mtm)):
-        norm_eigenvalues_mtm.append(Abs(N(sqrt(re(eigenvalues_mtm[i])), 10)))
+    for i in range(len(eigenvalues_h)):
+        norm_eigenvalues_mtm.append(Abs(N(re(eigenvalues_h[i]), 10)))
 
-    s = max(norm_eigenvalues_mtm)
+    s = sqrt(max(norm_eigenvalues_mtm))
     return s
