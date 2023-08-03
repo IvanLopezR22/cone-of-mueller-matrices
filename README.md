@@ -40,8 +40,8 @@ $$x$$
 $q_{M}$ be the quadratic form defined by $M^{T}GM$. Then
 
 $M$ is Mueller if and only if for all $\left( 
-\begin{array}{c}
-a \\ 
-z \\
-\end{array}
-\right) \in K$ 
+$ \begin{bmatrix}
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3 \\
+c_1 & c_2 & c_3 
+\end{bmatrix}  $
