@@ -42,21 +42,6 @@ $q_{M}$ be the quadratic form defined by $M^{T}GM$. Then
 $M$ is Mueller if and only if for all $\left( 
 \begin{array}{c}
 a \\ 
-z%
-\end{array}%
-\right) \in K$ with $\left( 
-\begin{array}{c}
-b \\ 
-x%
-\end{array}%
-\right) =M\left( 
-\begin{array}{c}
-a \\ 
-z%
-\end{array}%
-\right) $, $b\geq 0$ and $q_{M}\left( 
-\begin{array}{c}
-b \\ 
-x%
-\end{array}%
-\right) \geq 0$.
+z \\
+\end{array}
+\right) \in K$ 
