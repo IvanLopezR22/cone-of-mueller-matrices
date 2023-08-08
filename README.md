@@ -78,7 +78,7 @@ The user enters the matrices $M$, $aw$ and $amw$ and the program does the follow
     are none then select the first one it finds and that matrix is named $W$.<br />
     **Case 2.1.**: The null space of $H$ is trivial and $H$ have real eigenvalues: The program calculate the norm of real 
     eigenvalues and selects an eigenvector associated to the real eigenvalue with minimum norm, that matrix is named $W$.<br />
-    **Case 3.1.** The null space of $H$ is trivial and $H$ has no real eigenvalues: The program calculate the eigenvalues of the 
+    **Case 2.2.** The null space of $H$ is trivial and $H$ has no real eigenvalues: The program calculate the eigenvalues of the 
     matrix $H^{T}H$, which are all non-negative. Then select an eigenvector associated to the smallest eigenvalue of $H^{T}H$.
     That matrix is named $W$.
   - Using 3.4 in $W$ we ensure that our $W$ is invertible.
