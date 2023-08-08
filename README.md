@@ -46,23 +46,28 @@ is $K$-irreducible if and only if the following is true:
   - If $v$ is the only eigenvalue associated to the spectral radius, then $v$ or $-v$ is in the light cone $K$.
   - [3.4] **Know if the matrix is K-primitive**: Using the Birkhoff-Vandergraft Theorem, a matrix $M\in \mathbb{M}_{4}(\mathbb{R})$
 is $K$-primitive if and only if the following is true: 
-  -  The spectral radius $\rho(M)$ is an eigenvalue of $M$.
-  - The spectral radius is a simple eigenvalue of $M$.
-  - There are no other eigenvalues $r$ with norm $\rho(M)$.
-  - If $v$ is the only eigenvalue associated to the spectral radius, then $v$ or $-v$ is in the light cone $K$.
-  - [3.4] **Approximation by invertible matrix**: If the introduced matrix M is invertible then the program leaves the matrix
+    -  The spectral radius $\rho(M)$ is an eigenvalue of $M$.
+    - The spectral radius is a simple eigenvalue of $M$.
+    - There are no other eigenvalues $r$ with norm $\rho(M)$.
+    - If $v$ is the only eigenvalue associated to the spectral radius, then $v$ or $-v$ is in the light cone $K$.
+    - [3.4] **Approximation by invertible matrix**: If the introduced matrix M is invertible then the program leaves the matrix
 unchanged. If the matrix M is not invertible then the program modify M to be invertible using the following:<br />
-Let $M$ a $4x4$ real matrix and $\alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4}$
-the eigenvalues of $M$, then we can find a number $\varepsilon\in (0,1/100]$ with \varepsilon\not=\alpha_{i}, $i=1,2,3,4$. 
+Let $M\in \mathbb{M}\_{4}(\mathbb{R})$ and $\alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4}$
+the eigenvalues of $M$, then we can find a number $\varepsilon\in (0,1/100]$ with $\varepsilon\not=\alpha_{i}$, $i=1,2,3,4$. 
 Let $Id_{4}$ the identity of $\mathbb{M}_{4}(\mathbb{R})$, then $\varepsilon Id+M$ is an invertible matrix. 
-  - [3.5] **Approximation by a Mueller matrix**: Use 3.2 to calculate if the introduce matrix M is Mueller, if the matrix $M$ is
+  - [3.5] **Approximation by a Mueller matrix**: Use 3.2 to calculate if the introduce matrix $M$ is Mueller, if the matrix $M$ is
 already a Mueller matrix then the program leaves the matrix unchanged. If the matrix $M$ is not Mueller then use the following to 
 modify M to be a Mueller matrix: 
-  - The matrix $E_{11}\in int_{\mathbb{M}\_{4}(\mathbb{R})}(\tilde{K})$ (the matrix $E\_{11}$ is the matrix with 1 in element 11 and zero in any other) and $E_{11}+(1/2*||M||)M \in \mathbb{B}_{1}(E_{11}):=\{A\in \mathbb{M}_{4}(\mathbb{R})\vert ||E_{11}-A||\leq 1\}$, therefore
+  - The matrix $E_{11}\in int_{\mathbb{M}\_{4}(\mathbb{R})}(\tilde{K})$ (the matrix $E\_{11}$ is the matrix with 1 in element 11 and zero in any other) 
+and $E_{11}+(1/2*||M||)M \in \mathbb{B}\_{1}(E_{11}):=\{A\in \mathbb{M}\_{4}(\mathbb{R})\vert ||E_{11}-A||\leq 1\}$, therefore
 $2||M||E_{11}+M\in \tilde{K}$.
   - [3.6] **Approximation by an invertible Mueller matrix**: We use 3.5 to modify the introduced matrix M to a Mueller matrix M(mu), 
 then we use 3.4 to modify the matrix M(mu) to an invertible matrix. 
   - [3.7] **Approximation by a K-primitive matrix**: The program uses 3.5 to approximate the introduced matrix M to a Mueller matrix
 M(mu) and then use the following to aproximate M(mu) to a K-primitive matrix:<br />
-If a $M\in \mathbb{M}\python -m PyInstaller index.spec_{4}(\mathbb{R})$ is a Mueller matrix then $ (1/100)E_{11}} + M\in int_{\mathbb{M}_{4}(\mathbb{R})}(\tilde{K})$. 
-  - [3.8] **Eigenvalue Calibration Method (ECM)**: lll
+If a $M\in \mathbb{M}\_{4}(\mathbb{R})$ is a Mueller matrix then $ (1/100)E_{11}} + M\in int_{\mathbb{M}_{4}(\mathbb{R})}(\tilde{K})$. 
+  - [3.8] **Eigenvalue Calibration Method (ECM)**: Calibration of polarization-state generators PSG's, polarimeters, and Mueller-matrix
+ellipsometers MME's is an important factor in the practical use of these instruments. In the ECM, the PSG and the polarimeter 
+are described by two 4×4 matrices $W$ and $A$, and their 32 coefficients are determined from three or four measurements performed on reference samples.<br />
+
+    
