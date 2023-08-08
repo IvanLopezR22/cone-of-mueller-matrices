@@ -35,9 +35,9 @@
   <a name="Documentation-Matrix norm"></a><a name="3.1"></a>
   - [3.1] **Matrix norm**: This program is based on the Rayleigh-Ritz Theorem. Which assures us that the norm of the matrix 
 $M$ is the square root of the largest eigenvalue of the matrix $M^{T}M$.<br />
-  - [3.2] **Van Der Mee Theorem**: Deduce if a matrix is Mueller. Let $M$ be a $4\times 4-$ real matrix and 
-$q_{M}$ be the quadratic form defined by $M^{T}GM$. Then $M$ is a Mueller matrix if and only if for all  $x\in K$ ($where
-$K$ is the light cone) $q_{M}(x)\geq 0$ and $proy_{1}(M)(x)\geq $.<br />
+  - [3.2] **Van Der Mee Theorem**: Deduce if a matrix is Mueller. Let $M$ be a $4\times 4-$ real matrix,
+$q_{M}$ be the quadratic form defined by $M^{T}GM$ and $proy_{1}(M)$ the projection on the first coordinate.
+Then $M$ is a Mueller matrix if and only if for all  $x\in K$ ($where $K$ is the light cone) $q_{M}(x)\geq 0$ and $proy_{1}(M)(x)\geq 0$.<br />
   - [3.3] **Know if the matrix is K-irreducible**: Using the Birkhoff-Vandergraft Theorem, a matrix $M\in \mathbb{M}_{4}(\mathbb{R})$
 is $K$-irreducible if and only if the following is true:
     - The spectral radius $\rho(M)$ is an eigenvalue of $M$.
@@ -59,13 +59,13 @@ Let $Id_{4}$ the identity of $\mathbb{M}_{4}(\mathbb{R})$, then $\varepsilon Id+
 already a Mueller matrix then the program leaves the matrix unchanged. If the matrix $M$ is not Mueller then use the following to 
 modify M to be a Mueller matrix: <br /> 
 The matrix $E_{11}\in int_{\mathbb{M}\_{4}(\mathbb{R})}(\tilde{K})$ (the matrix $E\_{11}$ is the matrix with 1 in element 11 and zero in any other) 
-and $E_{11}+(1/2*||M||)M \in \mathbb{B}\_{1}(E_{11}):={A\in \mathbb{M}\_{4}(\mathbb{R})\vert ||E_{11}-A||\leq 1}$, therefore
+and $E_{11}+(1/2*||M||)M \in \mathbb{B}\_{1}(E_{11}):=\{A\in \mathbb{M}\_{4}(\mathbb{R})\vert ||E_{11}-A||\leq 1\}$, therefore
 $2||M||E_{11}+M\in \tilde{K}$.
-  - [3.6] **Approximation by an invertible Mueller matrix**: We use 3.5 to modify the introduced matrix M to a Mueller matrix M(mu), 
-then we use 3.4 to modify the matrix M(mu) to an invertible matrix. 
-  - [3.7] **Approximation by a K-primitive matrix**: The program uses 3.5 to approximate the introduced matrix M to a Mueller matrix
-M(mu) and then use the following to approximate M(mu) to a K-primitive matrix:<br />
-If a $M\in \mathbb{M}\_{4}(\mathbb{R})$ is a Mueller matrix then $ (1/100)E_{11}) + M\in int_{\mathbb{M}_{4}(\mathbb{R})}(\tilde{K})$. <br />
+  - [3.6] **Approximation by an invertible Mueller matrix**: We use 3.5 to modify the introduced matrix $M$ to a Mueller matrix $M(mu)$, 
+then we use 3.4 to modify the matrix $M(mu)$ to an invertible matrix. 
+  - [3.7] **Approximation by a K-primitive matrix**: The program uses 3.5 to approximate the introduced matrix $M$ to a Mueller matrix
+$M(mu)$ and then use the following to approximate $M(mu)$ to a K-primitive matrix:<br />
+If a $M\in \mathbb{M}\_{4}(\mathbb{R})$ is a Mueller matrix then $(1/100)E_{11}+M\in int_{\mathbb{M}_{4}(\mathbb{R})}(\tilde{K})$. <br />
   - [3.8] **Eigenvalue Calibration Method (ECM)**: Calibration of polarization-state generators PSG's, polarimeters, and Mueller-matrix
 ellipsometers MME's is an important factor in the practical use of these instruments. In the ECM, the PSG and the polarimeter 
 are described by two 4×4 matrices $W$ and $A$, and their 32 coefficients are determined from three or four measurements performed on reference samples.<br />
@@ -82,7 +82,7 @@ The user enters the matrices $M$, $aw$ and $amw$ and the program does the follow
     matrix $H^{T}H$, which are all non-negative. Then select an eigenvector associated to the smallest eigenvalue of $H^{T}H$.
     That matrix is named $W$.
   - Using 3.4 in $W$ we ensure that our $W$ is invertible.
-  - Calculate the new $M$ as $W(aw^{-1})amw(W^{-1}).
+  - Calculate the new $M$ as $W(aw^{-1})amw(W^{-1})$.
   - Finally, the program uses 3.6 to approximate the new M by an invertible Mueller matrix. This is our final matrix.
     
     
