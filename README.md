@@ -11,12 +11,12 @@
 
   <a name="General instructions for the code in the article--General information"></a><a name="1.1"></a>
   - [1.1] **General information**:
-    - `The program is made in the Python version 3.14.4. `
+    - `The program is made in the Python version 3.11.2. `
     - `To download the project, click on "code" and then on download zip.`
     - `To use the code in the article, it is recommended to use Pycharm to compile it.`
         <br />https://www.jetbrains.com/es-es/pycharm/download/?section=windows
   <a name="General instructions for the code in the article--installation"></a><a name="1.2"></a>
-  - [1.2] **Installation**:To install the libraries in the version of the code in the <br />
+  - [1.2] **Installation**:To install the libraries in the version of the code in the 
   article, download the file requirements and move it on your project. Then run the following command: pip install -r requirements.txt
 
 
