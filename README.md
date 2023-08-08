@@ -74,11 +74,11 @@ The user enters the matrices $M$, $aw$ and $amw$ and the program does the follow
     - Calculate the matrix form in canonical base of the linear funtion $H:\mathbb{M}\_{4}(\mathbb{R}) \rightarrow \mathbb{M}_{4}(\mathbb{R})$
     defined by $H(X)=MX-X(aw^{-1})(amw)$.
     - Calculate the null space of H.<br />
-    Case 1: The null space of $H$ is non-trivial: The program search for an invertible matrix in the null space, if there 
+    **Case 1**: The null space of $H$ is non-trivial: The program search for an invertible matrix in the null space, if there 
     are none then select the first one it finds and that matrix is named $W$.<br />
-    Case 2.1: The null space of $H$ is trivial and $H$ have real eigenvalues: The program calculate the norm of real 
-    eigenvalues and selects an eigenvector associated to the real eigenvalue with minimum norm, that matrix is named $W$.
-    Case 3.1 The null space of $H$ is trivial and $H$ has no real eigenvalues: The program calculate the eigenvalues of the 
+    **Case 2.1.**: The null space of $H$ is trivial and $H$ have real eigenvalues: The program calculate the norm of real 
+    eigenvalues and selects an eigenvector associated to the real eigenvalue with minimum norm, that matrix is named $W$.<br />
+    **Case 3.1.** The null space of $H$ is trivial and $H$ has no real eigenvalues: The program calculate the eigenvalues of the 
     matrix $H^{T}H$, which are all non-negative. Then select an eigenvector associated to the smallest eigenvalue of $H^{T}H$.
     That matrix is named $W$.
   - Using 3.4 in $W$ we ensure that our $W$ is invertible.
