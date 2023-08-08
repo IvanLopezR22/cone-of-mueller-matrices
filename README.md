@@ -37,7 +37,7 @@
 $M$ is the square root of the largest eigenvalue of the matrix $M^{T}M$.<br />
   - [3.2] **Van Der Mee Theorem**: Deduce if a matrix is Mueller. Let $M$ be a $4\times 4-$ real matrix,
 $q_{M}$ be the quadratic form defined by $M^{T}GM$ and $proy_{1}(M)$ the projection on the first coordinate.
-Then $M$ is a Mueller matrix if and only if for all  $x\in K$ ($where $K$ is the light cone) $q_{M}(x)\geq 0$ and $proy_{1}(M)(x)\geq 0$.<br />
+Then $M$ is a Mueller matrix if and only if for all  $x\in K$ (where $K$ is the light cone) $q_{M}(x)\geq 0$ and $proy_{1}(M)(x)\geq 0$.<br />
   - [3.3] **Know if the matrix is K-irreducible**: Using the Birkhoff-Vandergraft Theorem, a matrix $M\in \mathbb{M}_{4}(\mathbb{R})$
 is $K$-irreducible if and only if the following is true:
     - The spectral radius $\rho(M)$ is an eigenvalue of $M$.
