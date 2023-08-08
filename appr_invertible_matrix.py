@@ -31,7 +31,7 @@ def make_invertible(name, main_matrix):
         # Now we calculate the norm of the eigenvalues.
         norm_eigenvalues_m = []
         for i in range(len(eigen_m)):
-            norm_eigenvalues_m.append(round(Abs(N(eigen_m[i][0], 10)), 15))
+            norm_eigenvalues_m.append(round(Abs(N(eigen_m[i][0], 12)), 12))
 
         # Here we filter the zero eigenvalues.
         norms_no_zero = [x for x in norm_eigenvalues_m if x != 0]

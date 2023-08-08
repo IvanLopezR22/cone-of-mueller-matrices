@@ -44,7 +44,7 @@ ctypes.windll.kernel32.SetCurrentConsoleFontEx(
 )
 
 
-np.set_printoptions(precision=10, suppress=True, linewidth=2000)
+np.set_printoptions(precision=15, suppress=True, linewidth=2000)
 
 print("Enter the matrix you want to work with.")
 main_matrix = request_matrix_interface("M")
@@ -136,6 +136,7 @@ def option5():
         print(f"Then, M(inv)=M is: \n{np.array(invertible_main_matrix).astype(np.float64)}")
     else:
         print(f"The matrix M(inv) is: \n{np.array(invertible_main_matrix).astype(np.float64)}")
+        print(f"The determinant of M(inv) is {invertible_main_matrix.det()}.")
     print("------------------------------------------------------------------------------------")
     print('Press enter to return to the menu.')
     input()

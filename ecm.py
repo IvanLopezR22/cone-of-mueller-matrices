@@ -159,7 +159,7 @@ def ecm(m):
             # to have the eigenvalues of H ordered in the rows.
             eigenvectors_ht_h_transpose = eigenvectors_ht_h.transpose()
 
-            print(f"The matrix H^{{T}}*H is: \n{ht_h}")
+            #print(f"The matrix H^{{T}}*H is: \n{ht_h}")
             print("------------------------------------------------------------------------------------")
 
             # All eigenvalues of ht_h are non-negative, but they come with a tiny imaginary part given by the numerical

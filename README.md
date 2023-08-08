@@ -55,17 +55,21 @@ unchanged. If the matrix $M$ is not invertible then the program modify $M$ to be
 Let $M\in \mathbb{M}\_{4}(\mathbb{R})$ and $\alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4}$
 the eigenvalues of $M$, then we can find a number $\varepsilon\in (0,1/100]$ with $\varepsilon\not=\alpha_{i}$, $i=1,2,3,4$. 
 Let $Id_{4}$ the identity of $\mathbb{M}_{4}(\mathbb{R})$, then $\varepsilon Id+M$ is an invertible matrix. <br />
+We denote  as $M(inv)$ the approximation of $M$ by an invertible matrix.
   - [3.5] **Approximation by a Mueller matrix**: Use 3.2 to calculate if the introduce matrix $M$ is Mueller. If the matrix $M$ is
 already a Mueller matrix then the program leaves the matrix unchanged. If the matrix $M$ is not Mueller then use the following to 
 modify M to be a Mueller matrix: <br /> 
 The matrix $E_{11}\in int_{\mathbb{M}\_{4}(\mathbb{R})}(\tilde{K})$ (the matrix $E\_{11}$ is the matrix with 1 in element 11 and zero in any other) 
 and $E_{11}+(1/2*||M||)M \in \mathbb{B}\_{1}(E_{11}):=\\{A\in \mathbb{M}\_{4}(\mathbb{R})\vert ||E_{11}-A||\leq 1\\}$, therefore
-$2||M||E_{11}+M\in \tilde{K}$.
+$2||M||E_{11}+M\in \tilde{K}$.<br />
+We denote as $M(mu)$ the approximation of $M$ by a Mueller matrix.
   - [3.6] **Approximation by an invertible Mueller matrix**: We use 3.5 to modify the introduced matrix $M$ to a Mueller matrix $M(mu)$, 
-then we use 3.4 to modify the matrix $M(mu)$ to an invertible matrix. 
+then we use 3.4 to modify the matrix $M(mu)$ to an invertible matrix.<br />
+We denote as $M(mu-inv)$ the approximation of $M$ by an invertible Mueller matrix.
   - [3.7] **Approximation by a K-primitive matrix**: The program uses 3.5 to approximate the introduced matrix $M$ to a Mueller matrix
 $M(mu)$ and then use the following to approximate $M(mu)$ to a K-primitive matrix:<br />
 If a $M\in \mathbb{M}\_{4}(\mathbb{R})$ is a Mueller matrix then $(1/100)E_{11}+M\in int_{\mathbb{M}_{4}(\mathbb{R})}(\tilde{K})$. <br />
+We denote as $M(prim)
   - [3.8] **Eigenvalue Calibration Method (ECM)**: Calibration of polarization-state generators PSG's, polarimeters, and Mueller-matrix
 ellipsometers MME's is an important factor in the practical use of these instruments. In the ECM, the PSG and the polarimeter 
 are described by two 4×4 matrices $W$ and $A$, and their 32 coefficients are determined from three or four measurements performed on reference samples.<br />
