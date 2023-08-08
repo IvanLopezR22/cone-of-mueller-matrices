@@ -59,7 +59,7 @@ Let $Id_{4}$ the identity of $\mathbb{M}_{4}(\mathbb{R})$, then $\varepsilon Id+
 already a Mueller matrix then the program leaves the matrix unchanged. If the matrix $M$ is not Mueller then use the following to 
 modify M to be a Mueller matrix: <br /> 
 The matrix $E_{11}\in int_{\mathbb{M}\_{4}(\mathbb{R})}(\tilde{K})$ (the matrix $E\_{11}$ is the matrix with 1 in element 11 and zero in any other) 
-and $E_{11}+(1/2*||M||)M \in \mathbb{B}\_{1}(E_{11}):=\{A\in \mathbb{M}\_{4}(\mathbb{R})\vert ||E_{11}-A||\leq 1\}$, therefore
+and $E_{11}+(1/2*||M||)M \in \mathbb{B}\_{1}(E_{11}):=\left\{A\in \mathbb{M}\_{4}(\mathbb{R})\vert ||E_{11}-A||\leq 1\right\}$, therefore
 $2||M||E_{11}+M\in \tilde{K}$.
   - [3.6] **Approximation by an invertible Mueller matrix**: We use 3.5 to modify the introduced matrix $M$ to a Mueller matrix $M(mu)$, 
 then we use 3.4 to modify the matrix $M(mu)$ to an invertible matrix. 
