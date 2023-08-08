@@ -1,4 +1,4 @@
-# Cone of Mueller Matrices 
+# The cone of Mueller Matrices 
 
 
 ## Table of Contents
