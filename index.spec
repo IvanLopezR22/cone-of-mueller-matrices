@@ -1,3 +1,5 @@
+import sys ; sys.setrecursionlimit(sys.getrecursionlimit() * 5)
+
 # -*- mode: python ; coding: utf-8 -*-
 
 
@@ -5,7 +7,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['index'],
+    ['index.py'],
     pathex=[],
     binaries=[],
     datas=[],

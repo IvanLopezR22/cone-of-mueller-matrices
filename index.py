@@ -5,10 +5,8 @@ from utils.request_matrix import request_matrix_interface
 from utils.format_print_matrix import format_print_matrix
 from van_der_mee_theorem import van_der_mee_theorem
 from appr_invertible_mueller_matrix import appr_invert_mueller_matrix
-from appr_k_primitive import appr_k_primitive
 from ecm import ecm
 from k_irreducible import k_irreducible
-from k_primitive import k_primitive
 from appr_invertible_matrix import make_invertible
 from appr_mueller_matrix import appr_mueller_matrix
 import matplotlib.pyplot as plt
@@ -54,16 +52,14 @@ e_1 = Matrix([[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
 
 menu_options = {
     1: 'Matrix norm.',
-    2: 'Van Der Mee Theorem.',
+    2: 'Van Der Mee quadratic form.',
     3: 'Know if the matrix is K-irreducible.',
-    4: 'Know if the matrix is K-primitive',
-    5: 'Approximation by invertible matrix.',
-    6: 'Approximation by a Mueller matrix.',
-    7: 'Approximation by an invertible Mueller matrix.',
-    8: 'Approximation by a K-primitive matrix.',
-    9: 'Eigenvalue Calibration Method (ECM).',
-    10: 'Enter a new matrix.',
-    11: 'Exit.',
+    4: 'Approximation by an invertible matrix.',
+    5: 'Approximation by a Mueller matrix.',
+    6: 'Approximation by an invertible Mueller matrix.',
+    7: 'Eigenvalue Calibration Method (ECM).',
+    8: 'Enter a new matrix.',
+    9: 'Exit.',
 }
 
 
@@ -123,14 +119,6 @@ def option3():
 
 def option4():
     print("------------------------------------------------------------------------------------")
-    k_primitive(main_matrix)
-    print("------------------------------------------------------------------------------------")
-    print('Press enter to return to the menu.')
-    input()
-
-
-def option5():
-    print("------------------------------------------------------------------------------------")
     invertible_main_matrix, det_main_matrix = make_invertible("M", main_matrix)
     if det_main_matrix != 0:
         print(f"Then, M(inv)=M is: \n{np.array(invertible_main_matrix).astype(np.float64)}")
@@ -142,7 +130,7 @@ def option5():
     input()
 
 
-def option6():
+def option5():
     global main_matrix
     print("------------------------------------------------------------------------------------")
     norm_m = matrix_norm(main_matrix)
@@ -164,7 +152,7 @@ def option6():
     input()
 
 
-def option7():
+def option6():
     print("------------------------------------------------------------------------------------")
     appr_invert_mueller_matrix("M", main_matrix)
     print("------------------------------------------------------------------------------------")
@@ -172,15 +160,7 @@ def option7():
     input()
 
 
-def option8():
-    print("------------------------------------------------------------------------------------")
-    appr_k_primitive("M", main_matrix)
-    print("------------------------------------------------------------------------------------")
-    print('Press enter to return to the menu.')
-    input()
-
-
-def option9():
+def option7():
     print("------------------------------------------------------------------------------------")
     ecm(main_matrix)
     print("------------------------------------------------------------------------------------")
@@ -188,7 +168,7 @@ def option9():
     input()
 
 
-def option10():
+def option8():
     global main_matrix
     main_matrix = request_matrix_interface("M")
     print(f"The input matrix M is:\n{format_print_matrix(main_matrix)}")
@@ -202,7 +182,7 @@ if __name__ == '__main__':
             option = int(input('Insert the number of the operation you want to perform in the matrix: '))
             print("------------------------------------------------------------------------------------")
         except:
-            print('Invalid option. enter a number from 1 to 11.')
+            print('Invalid option. enter a number from 1 to 9.')
         # Check what choice was entered and act accordingly
         if option == 1:
             option1()
@@ -221,13 +201,9 @@ if __name__ == '__main__':
         elif option == 8:
             option8()
         elif option == 9:
-            option9()
-        elif option == 10:
-            option10()
-        elif option == 11:
             print("Thanks.")
             exit()
         else:
             print("-----------------------------------------------")
-            print('Invalid option. enter a number from 1 to 11.')
+            print('Invalid option. enter a number from 1 to 9.')
             print("-----------------------------------------------")

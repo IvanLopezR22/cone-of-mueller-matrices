@@ -1,40 +1,38 @@
 from sympy import *
 from sympy import Abs
 import numpy as np
+from numpy.linalg import eig
+from van_der_mee_theorem import van_der_mee_theorem
 
 
 def k_irreducible(m):
-    # eigen_m is a list with triples that have the form (eigenvalue, algebraic multiplicity, eigenvectors).
-    # The eigenvalues, algebraic multiplicity and eigenvectors are calculated exactly.
-    eigen_m = m.eigenvects()
+    # First we need to know if the matrix is Mueller.
+    qm, mi_qm, minimum_qm, proy1_m, mi_proy1_m, minimum_proy1_m, fig = van_der_mee_theorem(m)
+    if minimum_qm >= 0 and minimum_proy1_m >= 0:
+        print(f"The minimum of the functions qM and proy1(M) of the matrix M are "
+              f"{minimum_qm} and {minimum_proy1_m} respectively.")
+        print(f"Therefore, the matrix M is a Mueller matrix.")
+    else:
+        print(f"The minimum of the functions qM and proy1(M) of the matrix M are "
+              f"{minimum_qm} and {minimum_proy1_m} respectively.")
+        print(f"The matrix M is not a Mueller matrix, therefore is not K-irreducible.")
+        return
 
-    # Here we separate eigenvalues, algebraic multiplicity and eigenvectors into different lists,
-    # related by the indices.
-    eigenvalues = []
-    for element in eigen_m:
-        eigenvalues.append((element[0]))
-
-    mult_alg = []
-    for element in eigen_m:
-        mult_alg.append(element[1])
-
-    eigenvectors = []
-    for element in eigen_m:
-        eigenvectors.append(element[2:])
+    # eigenvalues is the list of Eigenvalues of M and eigenvectors is a matrix of Eigenvectors (in the columns) of M.
+    m_1 = np.array(m).astype(np.float64)
+    eigenvalues, eigenvectors = eig(m_1)
+    # For convenience, we use the transpose of the matrix eigenvectors to have the eigenvectors in the rows. Then the
+    # associated eigenvector to the first eigenvalue is the first row and so on.
+    eigenvectors_transpose = eigenvectors.transpose()
 
     # We have to calculate the spectral radius of M.
-    # Now, let's approximate the exact eigenvalues numerically.
-    num_eigenvalues = []
-    for i in range(len(eigenvalues)):
-        num_eigenvalues.append(N(eigenvalues[i], 10))
-
     # When the eigenvalues are approximated numerically, the numerical approximations generate small imaginary parts
     # in the real eigenvalues. Then we filter that error into the following list, using the fact that in the case of
-    # polynomials with real coefficients, if a complex number is a root, so is its conjugate.
+    # polynomials with real coefficients, If a complex number is a root, then its conjugate is too.
     eigenvalues_without_error = []
-    for i in num_eigenvalues:
+    for i in eigenvalues:
         conj = i.conjugate()
-        z = conj in num_eigenvalues
+        z = conj in eigenvalues
         if simplify(i).is_real == True:
             eigenvalues_without_error.append(i)
         elif simplify(i).is_real == False and z == False:
@@ -48,66 +46,68 @@ def k_irreducible(m):
     for i in range(len(eigenvalues_without_error)):
         norm_eigenvalues.append(Abs(eigenvalues_without_error[i]))
     print(f"The norms of the eigenvalues of M are: {norm_eigenvalues}.")
+    print(f"The eigenvectors of the matrix M (ordered in the rows) are:")
+    print(eigenvectors_transpose)
 
     # The spectral radius ro_m is the maximum in the list norm_eigenvalue.
     ro_m = max(norm_eigenvalues)
+    print(f"The spectral radius is {ro_m}.")
 
-    # Now we ask if ro_m is in the list of eigenvalues_without_error.
-    if ro_m in eigenvalues_without_error:
-        print(f"The spectral radius, {ro_m}, is an eigenvalue of M.")
-        ind_ro_m = eigenvalues_without_error.index(ro_m)
-    else:
-        print(f"The spectral radius, {ro_m}, is not an eigenvalue of M.")
-        print(f"Therefore, the matrix M is NOT K-irreducible.")
-        return
-
-    # We need to know if the spectral radius is a simple eigenvalue. That is, we need to know if the algebraic
-    # multiplicity of the spectral radius is 1.
-    mul_alg_ro_m = mult_alg[ind_ro_m]
-    if mul_alg_ro_m != 1:
-        print(f"The spectral radius, {ro_m}, has algebraic multiplicity {mul_alg_ro_m}. "
-              f"Then, is not a simple eigenvalue.")
-        print(f"Therefore the matrix is NOT K-irreducible.")
-        return
-    else:
-        print(f"The spectral radius, {ro_m}, is a simple eigenvalue.")
-
-    # We look for another eigenvalue with the same norm as the spectral radius and
-    # then check if they are simple eigenvalues.
-
-    index_1 = []
+    # index_spectral and index_non_spectral are the list of the index in the list of eigenvalues, corresponding to the
+    # spectral radius and values different to the spectral radius respectively.
+    index_spectral = []
     for y in range(len(norm_eigenvalues)):
-        if norm_eigenvalues[y] == ro_m:
-            index_1.append(y)
+        if eigenvalues_without_error[y] == ro_m:
+            index_spectral.append(y)
         else:
             continue
 
-    for element in index_1:
-        if mult_alg[element] != 1:
-            print(f"There is another eigenvalue, {eigenvalues_without_error[element]}, with norm {ro_m}")
-            print(f"and algebraic multiplicity {mult_alg[element]}. Then, is not a simple eigenvalue.")
-            print("Therefore, the matrix is NOT K-irreducible.")
+    index_non_spectral = []
+    for z in range(len(norm_eigenvalues)):
+        if eigenvalues_without_error[z] != ro_m:
+            index_non_spectral.append(z)
+        else:
+            continue
+
+    # Now, for the indices corresponding the spectral radius in the list of eigenvalues we find the associated
+    # eigenvectors and calculate if they are in the light cone. If one of them is not in the light cone, then the matrix
+    # is not K-irreducible.
+    for s in index_spectral:
+        V = eigenvectors_transpose[s]
+        U = np.array([re(V[0]), re(V[1]), re(V[2]), re(V[3])])
+        if U[0] < 0:
+            W = U * (-1)
+        else:
+            W = U
+        if ((W[3]) ** 2) + ((W[2]) ** 2) + ((W[1]) ** 2) < ((W[0]) ** 2):
+            continue
+        else:
+            print(f"The eigenvector \n{np.array(W).astype(np.float64).transpose()}\nassociated to the "
+                  f"spectral radius, is not in the light cone. Therefore, the matrix M is not K-irreducible.")
             return
+
+    print("All eigenvectors associated with the spectral radius are in the light cone.")
+
+    # For the indices corresponding the values different from spectral radius in the list of eigenvalues we find
+    # the associated eigenvectors and calculate if they are in the light cone. If one of them is in the light cone,
+    # then the matrix is not K-irreducible.
+    for s in index_non_spectral:
+        if simplify(eigenvalues_without_error[s]).is_real == True:
+            V = eigenvectors_transpose[s]
+            U = np.array([re(V[0]), re(V[1]), re(V[2]), re(V[3])])
+            if U[0] < 0:
+                W = U * (-1)
+            else:
+                W = U
+            if ((W[3]) ** 2) + ((W[2]) ** 2) + ((W[1]) ** 2) > ((W[0]) ** 2):
+                continue
+            else:
+                print(f"The eigenvector {np.array(W).astype(np.float64).transpose()} associated to the eigenvalue "
+                      f"{eigenvalues[s]} in the light cone. Therefore, the matrix M is not K-irreducible.")
+                return
         else:
             continue
-    print(f"All eigenvalues with norm {ro_m} are simples.")
+    print(f"For all eigenvalues other than the spectral radius, the corresponding eigenvectors are not "
+          f"in the light cone.")
 
-    # Remains to check if the only eigenvector v (or -v) associated with the spectral radius is in the light cone.
-    V = eigenvectors[ind_ro_m][0][0]
-    U = Matrix([[re(N((V[0, 0]), 10))], [re(N((V[1, 0]), 10))], [re(N((V[2, 0]), 10))], [re(N((V[3, 0]), 10))]])
-    print('The eigenvector associated to the spectral radius is:\n', np.array(U).astype(np.float64))
-    if U[0, 0] < 0:
-        W = (-1) * U
-        if ((W[3, 0]) ** 2) + ((W[2, 0]) ** 2) + ((W[1, 0]) ** 2) <= ((W[0, 0]) ** 2):
-            print(f"The eigenvector corresponding to the spectral radius is in the light cone, "
-                  f"therefore M is K-irreducible.")
-        else:
-            print(f"The eigenvector corresponding to the spectral radius is NOT in the light cone, "
-                  f"therefore M is NOT K-irreducible. ")
-    else:
-        if ((U[3, 0]) ** 2) + ((U[2, 0]) ** 2) + ((U[1, 0]) ** 2) <= ((U[0, 0]) ** 2):
-            print(f"The eigenvector corresponding to the spectral radius is in the light light cone, "
-                  f"therefore M is K-irreducible.")
-        else:
-            print(f"The eigenvector corresponding to the spectral radius is NOT in the light cone, "
-                  f"therefore M is NOT K-irreducible. ")
+    print("Therefore, the matrix is K-irreducible.")

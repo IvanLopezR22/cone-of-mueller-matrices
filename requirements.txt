@@ -1,6 +1,6 @@
-numpy==1.24.3
+numpy==1.25.2
 sympy==1.12
-matplotlib==3.7.1
+matplotlib==3.7.2
+python 3.11
 PySimpleGUI==4.60.5
 pyinstaller==5.12.0
-

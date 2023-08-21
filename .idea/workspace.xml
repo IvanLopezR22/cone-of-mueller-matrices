@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c8f19228-4d23-44ac-b7a1-e37ace874b8d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rvprogramaspython.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appr_k_primitive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/index/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index/COLLECT-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/index/COLLECT-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/index/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/index/PYZ-00.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/index/PYZ-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index/index.exe" beforeDir="false" afterPath="$PROJECT_DIR$/build/index/index.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index/index.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/index/index.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index/warn-index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/index/warn-index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index/xref-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index/xref-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index/contourpy/_contourpy.cp311-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index/index.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index/index.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.spec" beforeDir="false" afterPath="$PROJECT_DIR$/index.spec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k_irreducible.py" beforeDir="false" afterPath="$PROJECT_DIR$/k_irreducible.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k_primitive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/read.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/k_primitive.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2R5eqS7dN1iDzTyccTMq8GAilVy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ivan_/PycharmProjects/rvprogramaspython&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8f19228-4d23-44ac-b7a1-e37ace874b8d" name="Changes" comment="" />
+      <created>1686544560947</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686544560947</updated>
+    </task>
+    <servers />
+  </component>
+</project>

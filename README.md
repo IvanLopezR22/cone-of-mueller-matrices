@@ -35,22 +35,14 @@
   <a name="Documentation-Matrix norm"></a><a name="3.1"></a>
   - [3.1] **Matrix norm**: This program is based on the Rayleigh-Ritz Theorem. Which assures us that the norm of the matrix 
 $M$ is the square root of the largest eigenvalue of the matrix $M^{T}M$.<br />
-  - [3.2] **Van Der Mee Theorem**: Deduce if a matrix is Mueller. Let $M$ be a $4\times 4-$ real matrix,
+  - [3.2] **Van Der Mee quadratic form**: Deduce if a matrix is Mueller. Let $M$ be a $4\times 4-$ real matrix,
 $q_{M}$ be the quadratic form defined by $M^{T}GM$ and $proy_{1}(M)$ the projection on the first coordinate.
 Then $M$ is a Mueller matrix if and only if for all  $x\in K$ (where $K$ is the light cone) $q_{M}(x)\geq 0$ and $proy_{1}(M)(x)\geq 0$.<br />
   - [3.3] **Know if the matrix is K-irreducible**: Using the Birkhoff-Vandergraft Theorem, a matrix $M\in \mathbb{M}_{4}(\mathbb{R})$
 is $K$-irreducible if and only if the following is true:
-    - The spectral radius $\rho(M)$ is an eigenvalue of $M$.
-    - The spectral radius is a simple eigenvalue of $M$.
-    - If there is another eigenvalue $r$ with norm $\rho(M)$, then $r$ is a simple eigenvalue of $M$.
-    - If $v$ is the only eigenvalue associated to the spectral radius, then $v$ or $-v$ is in the light cone $K$.<br />
-  - [3.4] **Know if the matrix is K-primitive**: Using the Birkhoff-Vandergraft Theorem, a matrix $M\in \mathbb{M}_{4}(\mathbb{R})$
-is $K$-primitive if and only if the following is true: 
-    -  The spectral radius $\rho(M)$ is an eigenvalue of $M$.
-    - The spectral radius is a simple eigenvalue of $M$.
-    - There are no other eigenvalues $r$ with norm $\rho(M)$.
-    - If $v$ is the only eigenvalue associated to the spectral radius, then $v$ or $-v$ is in the light cone $K$.
-  - [3.4] **Approximation by invertible matrix**: If the introduced matrix M is invertible then the program leaves the matrix
+    - For all $v\in K$ such that $Mv=\rho_{M}v$ then $v\in int_{\mathbb{R}}(K)$.
+    - For all $\lambda \not= \rho_{M}$ eigenvalue of $M$ and for all $w$ eigenvector of $\lambda$ it is truth that $w\not\in K$.<br />
+  - [3.4] **Approximation by an invertible matrix**: If the introduced matrix M is invertible then the program leaves the matrix
 unchanged. If the matrix $M$ is not invertible then the program modify $M$ to be invertible using the following:<br />
 Let $M\in \mathbb{M}\_{4}(\mathbb{R})$ and $\alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4}$
 the eigenvalues of $M$, then we can find a number $\varepsilon\in (0,1/100]$ with $\varepsilon\not=\alpha_{i}$, $i=1,2,3,4$. 
@@ -66,11 +58,7 @@ We denote as $M(mu)$ the approximation of $M$ by a Mueller matrix.
   - [3.6] **Approximation by an invertible Mueller matrix**: We use 3.5 to modify the introduced matrix $M$ to a Mueller matrix $M(mu)$, 
 then we use 3.4 to modify the matrix $M(mu)$ to an invertible matrix.<br />
 We denote as $M(mu-inv)$ the approximation of $M$ by an invertible Mueller matrix.
-  - [3.7] **Approximation by a K-primitive matrix**: The program uses 3.5 to approximate the introduced matrix $M$ to a Mueller matrix
-$M(mu)$ and then use the following to approximate $M(mu)$ to a K-primitive matrix:<br />
-If a $M\in \mathbb{M}\_{4}(\mathbb{R})$ is a Mueller matrix then $(1/100)E_{11}+M\in int_{\mathbb{M}_{4}(\mathbb{R})}(\tilde{K})$. <br />
-We denote as $M(prim)
-  - [3.8] **Eigenvalue Calibration Method (ECM)**: Calibration of polarization-state generators PSG's, polarimeters, and Mueller-matrix
+  - [3.7] **Eigenvalue Calibration Method (ECM)**: Calibration of polarization-state generators PSG's, polarimeters, and Mueller-matrix
 ellipsometers MME's is an important factor in the practical use of these instruments. In the ECM, the PSG and the polarimeter 
 are described by two 4×4 matrices $W$ and $A$, and their 32 coefficients are determined from three or four measurements performed on reference samples.<br />
 The user enters the matrices $M$, $aw$ and $amw$ and the program does the following:<br />
