@@ -64,7 +64,7 @@ def ecm(m):
     # Case 2: If the matrix W is not invertible, then we force W to be invertible using make_invertible(W).
     # Note: The function make_invertible is in the file appr_mueller_matrix.
     if null_space_h:
-        print('The null space of H is not trivial')
+        print('The null space of H is not trivial.')
         j = 0
         while j <= (len(null_space_h) - 1) and Abs(
                 round(Matrix(np.array(null_space_h[j].transpose()).astype(np.float64).reshape((4, 4))).det(),
@@ -104,7 +104,7 @@ def ecm(m):
         # 1.3. We find an eigenvector W associated to the eigenvalue at which the minimum norm is reached.
         # 1.4. We make W invertible using the function make_invertible(W).
 
-        print('The null space of H is trivial')
+        print('The null space of H is trivial.')
         # First we compute the eigenvalues and eigenvectors of H.
 
         # The 1d numpy array eigenvalues_h and the 2d numpy array eigenvectors_h

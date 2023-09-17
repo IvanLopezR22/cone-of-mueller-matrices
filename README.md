@@ -40,25 +40,34 @@ $q_{M}$ be the quadratic form defined by $M^{T}GM$ and $proy_{1}(M)$ the project
 Then $M$ is a Mueller matrix if and only if for all  $x\in K$ (where $K$ is the light cone) $q_{M}(x)\geq 0$ and $proy_{1}(M)(x)\geq 0$.<br />
   - [3.3] **Know if the matrix is K-irreducible**: Using the Birkhoff-Vandergraft Theorem, a matrix $M\in \mathbb{M}_{4}(\mathbb{R})$
 is $K$-irreducible if and only if the following is true:
-    - For all $v\in K$ such that $Mv=\rho_{M}v$ then $v\in int_{\mathbb{R}}(K)$.
+    - $\rho_{M} is a simple eigenvalue of $M$.
+    - Any other eigenvalue having modulus $\rho_{M}$ is simple. 
+    - The eigenvalue $v$ associated to $\rho_{M}$ is in the interior of the light cone. 
     - For all $\lambda \not= \rho_{M}$ eigenvalue of $M$ and for all $w$ eigenvector of $\lambda$ it is truth that $w\not\in K$.<br />
-  - [3.4] **Approximation by an invertible matrix**: If the introduced matrix M is invertible then the program leaves the matrix
+  - [3.4] **Know if the matrix is K-primitive**: Using the Birkhoff-Vandergraft Theorem, a matrix $M\in \mathbb{M}_{4}(\mathbb{R})$
+is $K$-irreducible if and only if the following is true:
+    - The matrix $M$ is $K$-irreducible.
+    - For all $\lambda$ eigenvalue of $M$ it is truth that $|\lambda|\not=\rho_{M}$.
+  - [3.5] **Approximation by an invertible matrix**: If the introduced matrix M is invertible then the program leaves the matrix
 unchanged. If the matrix $M$ is not invertible then the program modify $M$ to be invertible using the following:<br />
 Let $M\in \mathbb{M}\_{4}(\mathbb{R})$ and $\alpha_{1}, \alpha_{2}, \alpha_{3}, \alpha_{4}$
 the eigenvalues of $M$, then we can find a number $\varepsilon\in (0,1/100]$ with $\varepsilon\not=\alpha_{i}$, $i=1,2,3,4$. 
 Let $Id_{4}$ the identity of $\mathbb{M}_{4}(\mathbb{R})$, then $\varepsilon Id+M$ is an invertible matrix. <br />
 We denote  as $M(inv)$ the approximation of $M$ by an invertible matrix.
-  - [3.5] **Approximation by a Mueller matrix**: Use 3.2 to calculate if the introduce matrix $M$ is Mueller. If the matrix $M$ is
+  - [3.6] **Approximation by a Mueller matrix**: Use 3.2 to calculate if the introduce matrix $M$ is Mueller. If the matrix $M$ is
 already a Mueller matrix then the program leaves the matrix unchanged. If the matrix $M$ is not Mueller then use the following to 
 modify M to be a Mueller matrix: <br /> 
 The matrix $E_{11}\in int_{\mathbb{M}\_{4}(\mathbb{R})}(\tilde{K})$ (the matrix $E\_{11}$ is the matrix with 1 in element 11 and zero in any other) 
 and $E_{11}+(1/2*||M||)M \in \mathbb{B}\_{1}(E_{11}):=\\{A\in \mathbb{M}\_{4}(\mathbb{R})\vert ||E_{11}-A||\leq 1\\}$, therefore
 $2||M||E_{11}+M\in \tilde{K}$.<br />
 We denote as $M(mu)$ the approximation of $M$ by a Mueller matrix.
-  - [3.6] **Approximation by an invertible Mueller matrix**: We use 3.5 to modify the introduced matrix $M$ to a Mueller matrix $M(mu)$, 
+  - [3.7] **Approximation by an invertible Mueller matrix**: We use 3.5 to modify the introduced matrix $M$ to a Mueller matrix $M(mu)$, 
 then we use 3.4 to modify the matrix $M(mu)$ to an invertible matrix.<br />
 We denote as $M(mu-inv)$ the approximation of $M$ by an invertible Mueller matrix.
-  - [3.7] **Eigenvalue Calibration Method (ECM)**: Calibration of polarization-state generators PSG's, polarimeters, and Mueller-matrix
+  - [3.8] **Approximation by a $K$-primitive matrix**: If $M$ is a Mueller matrix then $(1/100E_{11})+$M$ is $K$-primitive. Then we can use 3.6
+to assure $M$ to a Mueller matrix first.
+We denote as $M(prim)$ the approximation of $M$ by a $K$-primitive matrix.
+  - [3.9] **Eigenvalue Calibration Method (ECM)**: Calibration of polarization-state generators PSG's, polarimeters, and Mueller-matrix
 ellipsometers MME's is an important factor in the practical use of these instruments. In the ECM, the PSG and the polarimeter 
 are described by two 4×4 matrices $W$ and $A$, and their 32 coefficients are determined from three or four measurements performed on reference samples.<br />
 The user enters the matrices $M$, $aw$ and $amw$ and the program does the following:<br />
