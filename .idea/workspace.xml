@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8f19228-4d23-44ac-b7a1-e37ace874b8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/appr_k_primitive.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k_primitive.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/know_k_irreducible_k_primitive.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecm.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_irreducible.py" beforeDir="false" afterPath="$PROJECT_DIR$/k_irreducible.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

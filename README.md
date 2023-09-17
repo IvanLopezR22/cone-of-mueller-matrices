@@ -40,12 +40,12 @@ $q_{M}$ be the quadratic form defined by $M^{T}GM$ and $proy_{1}(M)$ the project
 Then $M$ is a Mueller matrix if and only if for all  $x\in K$ (where $K$ is the light cone) $q_{M}(x)\geq 0$ and $proy_{1}(M)(x)\geq 0$.<br />
   - [3.3] **Know if the matrix is K-irreducible**: Using the Birkhoff-Vandergraft Theorem, a matrix $M\in \mathbb{M}_{4}(\mathbb{R})$
 is $K$-irreducible if and only if the following is true:
-    - $\rho_{M} is a simple eigenvalue of $M$.
+    - $\rho_{M}$ is a simple eigenvalue of $M$.
     - Any other eigenvalue having modulus $\rho_{M}$ is simple. 
     - The eigenvalue $v$ associated to $\rho_{M}$ is in the interior of the light cone. 
     - For all $\lambda \not= \rho_{M}$ eigenvalue of $M$ and for all $w$ eigenvector of $\lambda$ it is truth that $w\not\in K$.<br />
   - [3.4] **Know if the matrix is K-primitive**: Using the Birkhoff-Vandergraft Theorem, a matrix $M\in \mathbb{M}_{4}(\mathbb{R})$
-is $K$-irreducible if and only if the following is true:
+is $K$-primitive if and only if the following is true:
     - The matrix $M$ is $K$-irreducible.
     - For all $\lambda$ eigenvalue of $M$ it is truth that $|\lambda|\not=\rho_{M}$.
   - [3.5] **Approximation by an invertible matrix**: If the introduced matrix M is invertible then the program leaves the matrix
@@ -61,17 +61,17 @@ The matrix $E_{11}\in int_{\mathbb{M}\_{4}(\mathbb{R})}(\tilde{K})$ (the matrix 
 and $E_{11}+(1/2*||M||)M \in \mathbb{B}\_{1}(E_{11}):=\\{A\in \mathbb{M}\_{4}(\mathbb{R})\vert ||E_{11}-A||\leq 1\\}$, therefore
 $2||M||E_{11}+M\in \tilde{K}$.<br />
 We denote as $M(mu)$ the approximation of $M$ by a Mueller matrix.
-  - [3.7] **Approximation by an invertible Mueller matrix**: We use 3.5 to modify the introduced matrix $M$ to a Mueller matrix $M(mu)$, 
-then we use 3.4 to modify the matrix $M(mu)$ to an invertible matrix.<br />
+  - [3.7] **Approximation by an invertible Mueller matrix**: We use 3.6 to modify the introduced matrix $M$ to a Mueller matrix $M(mu)$, 
+then we use 3.5 to modify the matrix $M(mu)$ to an invertible matrix.<br />
 We denote as $M(mu-inv)$ the approximation of $M$ by an invertible Mueller matrix.
-  - [3.8] **Approximation by a $K$-primitive matrix**: If $M$ is a Mueller matrix then $(1/100E_{11})+$M$ is $K$-primitive. Then we can use 3.6
+  - [3.8] **Approximation by a $K$-primitive matrix**: If $M$ is a Mueller matrix then $(1/100E_{11})+M$ is $K$-primitive. Then we can use 3.6
 to assure $M$ to a Mueller matrix first.
 We denote as $M(prim)$ the approximation of $M$ by a $K$-primitive matrix.
   - [3.9] **Eigenvalue Calibration Method (ECM)**: Calibration of polarization-state generators PSG's, polarimeters, and Mueller-matrix
 ellipsometers MME's is an important factor in the practical use of these instruments. In the ECM, the PSG and the polarimeter 
 are described by two 4×4 matrices $W$ and $A$, and their 32 coefficients are determined from three or four measurements performed on reference samples.<br />
 The user enters the matrices $M$, $aw$ and $amw$ and the program does the following:<br />
-    - The program 3.4 is used in aw to ensure that it is invertible.
+    - The program 3.5 is used in aw to ensure that it is invertible.
     - Calculate the matrix form in canonical base of the linear funtion $H:\mathbb{M}\_{4}(\mathbb{R}) \rightarrow \mathbb{M}_{4}(\mathbb{R})$
     defined by $H(X)=MX-X(aw^{-1})(amw)$.
     - Calculate the null space of H.<br />
@@ -82,9 +82,9 @@ The user enters the matrices $M$, $aw$ and $amw$ and the program does the follow
     **Case 2.2.** The null space of $H$ is trivial and $H$ has no real eigenvalues: The program calculate the eigenvalues of the 
     matrix $H^{T}H$, which are all non-negative. Then select an eigenvector associated to the smallest eigenvalue of $H^{T}H$.
     That matrix is named $W$.
-  - Using 3.4 in $W$ we ensure that our $W$ is invertible.
+  - Using 3.5 in $W$ we ensure that our $W$ is invertible.
   - Calculate the new $M$ as $W(aw^{-1})amw(W^{-1})$.
-  - Finally, the program uses 3.6 to approximate the new M by an invertible Mueller matrix. This is our final matrix.
+  - Finally, the program uses 3.7 to approximate the new M by an invertible Mueller matrix. This is our final matrix.
     
     
     
